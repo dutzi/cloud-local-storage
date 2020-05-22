@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "import/first": "off",
+    "no-shadow": "off"
+  }
+}
