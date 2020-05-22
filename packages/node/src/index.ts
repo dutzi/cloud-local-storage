@@ -1,32 +1,19 @@
-import fetch from 'node-fetch';
-
-// const BASE_URL = 'http://localhost:5011/cloud-local-storage/us-central1';
-const BASE_URL = 'http://localhost:5011/cloud-local-storage/us-central1';
+import getItem from './commands/get-item';
+import setItem from './commands/set-item';
+import create from './commands/create';
+import list from './commands/list';
 
 function createCloudLocalStorageClient(token: string) {
-  function getItem(key: string) {
-    return fetch(`${BASE_URL}/getItem?key=${key}&token=${token}`).then(
-      (res) => res.json() as object | null
-    );
-  }
-
-  function setItem(key: string, data: object | null) {
-    if (typeof data !== 'object' || Array.isArray(data)) {
-      throw new Error('data-not-object');
-    }
-
-    return fetch(`${BASE_URL}/setItem`, {
-      method: 'post',
-      body: JSON.stringify({
-        key,
-        data,
-        token,
-      }),
-    }).then((res) => res.json());
-  }
-
-  return { getItem, setItem };
+  return {
+    getItem: (key: string) => getItem(key, token),
+    setItem: (key: string, value: object | null) => setItem(key, value, token),
+  };
 }
+
+createCloudLocalStorageClient.getItem = getItem;
+createCloudLocalStorageClient.setItem = setItem;
+createCloudLocalStorageClient.create = create;
+createCloudLocalStorageClient.list = list;
 
 module.exports = createCloudLocalStorageClient;
 

@@ -1,7 +1,7 @@
-import createLocalStorage from 'cloud-local-storage';
+import cls from 'cloud-local-storage';
 
-const localStorage = createLocalStorage('0000');
+const storage = cls('my-token');
 
-localStorage.setItem('my-data-key', { a: 1, b: 3 }).then(() => {
-  return localStorage.getItem('my-data-key').then((res) => console.log(res));
+storage.setItem('some-key', { a: 1, b: 3 }).then(() => {
+  return storage.getItem('some-key').then((res) => console.log(res));
 });
