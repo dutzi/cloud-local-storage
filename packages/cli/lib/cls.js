@@ -50,11 +50,10 @@ require("firebase/auth");
 require("firebase/firestore");
 var os_1 = __importDefault(require("os"));
 var node_fetch_1 = __importDefault(require("node-fetch"));
-// const BASE_URL = 'http://localhost:5011/cloud-local-storage/us-central1';
 var isDeveloping = process.env.NODE_ENV === 'development';
 var BASE_URL = isDeveloping
     ? 'http://localhost:5011/cloud-local-storage/us-central1'
-    : '';
+    : 'https://cls.tools';
 var rcFileName = '.clsrc';
 var credsFilePath = path_1.default.resolve(os_1.default.homedir(), rcFileName);
 var firebaseConfig = {

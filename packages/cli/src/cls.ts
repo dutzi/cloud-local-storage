@@ -11,12 +11,11 @@ import 'firebase/firestore';
 import os from 'os';
 import fetch from 'node-fetch';
 
-// const BASE_URL = 'http://localhost:5011/cloud-local-storage/us-central1';
 const isDeveloping = process.env.NODE_ENV === 'development';
 
 const BASE_URL = isDeveloping
   ? 'http://localhost:5011/cloud-local-storage/us-central1'
-  : '';
+  : 'https://cls.tools';
 
 const rcFileName = '.clsrc';
 const credsFilePath = path.resolve(os.homedir(), rcFileName);
