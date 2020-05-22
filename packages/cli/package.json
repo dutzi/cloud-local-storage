@@ -2,11 +2,26 @@
   "name": "cloud-local-storage-cli",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "bin": "lib/index.js",
   "scripts": {
+    "start": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^7.14.5",
+    "fs-extra": "^9.0.0",
+    "inquirer": "^7.1.0",
+    "prompt": "^1.0.0",
+    "uuidv4": "^6.0.9",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
+    "@types/inquirer": "^6.5.0",
+    "@types/uuidv4": "^5.0.0",
+    "@types/yargs": "^15.0.5"
+  }
 }

@@ -713,3 +713,283 @@ INFO: Detected non-HTTP/2 connection.
 [debug] [2020-05-22T15:13:37.761Z] May 22, 2020 6:13:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
  {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:13:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:14:37.839Z] May 22, 2020 6:14:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:14:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:15:37.879Z] May 22, 2020 6:15:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:15:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:16:37.911Z] May 22, 2020 6:16:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:16:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:17:37.950Z] May 22, 2020 6:17:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:17:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:17:55.566Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2020-05-22T15:17:56.154Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2020-05-22T15:17:56.155Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2020-05-22T15:17:57.157Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (~diagnostic~)"}}
+[debug] [2020-05-22T15:17:57.158Z] [worker-~diagnostic~-2a42923d-58fd-46f6-b9bd-32b925fe4aab]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-2a42923d-58fd-46f6-b9bd-32b925fe4aab]: FINISHING"}}
+[debug] [2020-05-22T15:17:57.163Z] [worker-pool] Shutting down IDLE worker (setItem) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (setItem)"}}
+[debug] [2020-05-22T15:17:57.164Z] [worker-setItem-a0f524c5-1e8a-414f-bc28-00e2a50a6b78]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-setItem-a0f524c5-1e8a-414f-bc28-00e2a50a6b78]: FINISHING"}}
+[debug] [2020-05-22T15:17:57.164Z] [worker-pool] Shutting down IDLE worker (getItem) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (getItem)"}}
+[debug] [2020-05-22T15:17:57.164Z] [worker-getItem-04b78499-659a-46c4-adb0-936f1a09d53b]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-getItem-04b78499-659a-46c4-adb0-936f1a09d53b]: FINISHING"}}
+[debug] [2020-05-22T15:17:57.178Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2020-05-22T15:17:57.178Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=2"}}
+[debug] [2020-05-22T15:17:57.178Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2020-05-22T15:17:57.178Z] [worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: Assigning socketPath: /var/folders/pw/qn1rbv5x1bgcylplb0wzhytm0000gn/T/fire_emu_70951.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: Assigning socketPath: /var/folders/pw/qn1rbv5x1bgcylplb0wzhytm0000gn/T/fire_emu_70951.sock"}}
+[debug] [2020-05-22T15:17:57.178Z] [worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: BUSY"}}
+[debug] [2020-05-22T15:17:57.187Z] [worker-~diagnostic~-2a42923d-58fd-46f6-b9bd-32b925fe4aab]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-2a42923d-58fd-46f6-b9bd-32b925fe4aab]: exited"}}
+[debug] [2020-05-22T15:17:57.187Z] [worker-~diagnostic~-2a42923d-58fd-46f6-b9bd-32b925fe4aab]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-2a42923d-58fd-46f6-b9bd-32b925fe4aab]: FINISHED"}}
+[debug] [2020-05-22T15:17:57.188Z] [worker-setItem-a0f524c5-1e8a-414f-bc28-00e2a50a6b78]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-setItem-a0f524c5-1e8a-414f-bc28-00e2a50a6b78]: exited"}}
+[debug] [2020-05-22T15:17:57.188Z] [worker-setItem-a0f524c5-1e8a-414f-bc28-00e2a50a6b78]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-setItem-a0f524c5-1e8a-414f-bc28-00e2a50a6b78]: FINISHED"}}
+[debug] [2020-05-22T15:17:57.188Z] [worker-getItem-04b78499-659a-46c4-adb0-936f1a09d53b]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-getItem-04b78499-659a-46c4-adb0-936f1a09d53b]: exited"}}
+[debug] [2020-05-22T15:17:57.188Z] [worker-getItem-04b78499-659a-46c4-adb0-936f1a09d53b]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-getItem-04b78499-659a-46c4-adb0-936f1a09d53b]: FINISHED"}}
+[debug] [2020-05-22T15:17:57.847Z] [runtime-status] [70951] Functions runtime initialized. {"cwd":"/Users/eldad/projects/cloud-local-storage/packages/app/functions","node_version":"10.15.1"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] Functions runtime initialized. {\"cwd\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions\",\"node_version\":\"10.15.1\"}"}}
+[debug] [2020-05-22T15:17:57.849Z] [runtime-status] [70951] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] Disabled runtime features: undefined"}}
+[debug] [2020-05-22T15:17:57.852Z] [runtime-status] [70951] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2020-05-22T15:17:57.854Z] [runtime-status] [70951] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T15:17:57.857Z] [runtime-status] [70951] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2020-05-22T15:17:57.922Z] [runtime-status] [70951] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] Checked functions.config() {\"config\":{}}"}}
+[debug] [2020-05-22T15:17:57.922Z] [runtime-status] [70951] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T15:17:57.922Z] [runtime-status] [70951] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2020-05-22T15:17:57.922Z] [runtime-status] [70951] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T15:17:57.923Z] [runtime-status] [70951] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2020-05-22T15:17:57.925Z] [runtime-status] [70951] initializeApp(DEFAULT) {"databaseURL":"https://cloud-local-storage.firebaseio.com","storageBucket":"cloud-local-storage.appspot.com","projectId":"cloud-local-storage"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [70951] initializeApp(DEFAULT) {\"databaseURL\":\"https://cloud-local-storage.firebaseio.com\",\"storageBucket\":\"cloud-local-storage.appspot.com\",\"projectId\":\"cloud-local-storage\"}"}}
+[debug] [2020-05-22T15:17:58.325Z] [worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: IDLE"}}
+[debug] [2020-05-22T15:18:37.975Z] May 22, 2020 6:18:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:18:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:19:38.009Z] May 22, 2020 6:19:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:19:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:20:38.032Z] May 22, 2020 6:20:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:20:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:21:38.059Z] May 22, 2020 6:21:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:21:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:22:38.084Z] May 22, 2020 6:22:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:22:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:23:38.114Z] May 22, 2020 6:23:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:23:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:23:49.852Z] May 22, 2020 6:23:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:23:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:35:59.983Z] May 22, 2020 6:35:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:35:59 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:36:01.350Z] May 22, 2020 6:36:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:36:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:36:01.503Z] May 22, 2020 6:36:01 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:36:01 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2020-05-22T15:36:49.669Z] May 22, 2020 6:36:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:36:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:36:49.943Z] May 22, 2020 6:36:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:36:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:37:14.836Z] May 22, 2020 6:37:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:37:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:37:14.847Z] May 22, 2020 6:37:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:37:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:37:14.865Z] May 22, 2020 6:37:14 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:37:14 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2020-05-22T15:37:15.406Z] May 22, 2020 6:37:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:37:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:38:32.040Z] May 22, 2020 6:38:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:38:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:39:32.146Z] May 22, 2020 6:39:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:39:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:40:32.193Z] May 22, 2020 6:40:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:40:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:41:32.241Z] May 22, 2020 6:41:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:41:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:42:32.288Z] May 22, 2020 6:42:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:42:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:43:32.351Z] May 22, 2020 6:43:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:43:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:44:32.413Z] May 22, 2020 6:44:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:44:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:45:32.517Z] May 22, 2020 6:45:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:45:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:46:32.559Z] May 22, 2020 6:46:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:46:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:47:32.591Z] May 22, 2020 6:47:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:47:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:48:32.622Z] May 22, 2020 6:48:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:48:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:49:32.678Z] May 22, 2020 6:49:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:49:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:50:32.726Z] May 22, 2020 6:50:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:50:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:51:32.780Z] May 22, 2020 6:51:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:51:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:52:32.815Z] May 22, 2020 6:52:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:52:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:53:32.893Z] May 22, 2020 6:53:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:53:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:54:33.001Z] May 22, 2020 6:54:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:54:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:55:33.075Z] May 22, 2020 6:55:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:55:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:55:44.807Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/cors-options.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/cors-options.js.map changed, reloading triggers"}}
+[debug] [2020-05-22T15:55:44.811Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/cors-options.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/cors-options.js changed, reloading triggers"}}
+[debug] [2020-05-22T15:55:44.814Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/get-item.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/get-item.js.map changed, reloading triggers"}}
+[debug] [2020-05-22T15:55:44.815Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/get-item.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/get-item.js changed, reloading triggers"}}
+[debug] [2020-05-22T15:55:44.816Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/set-item.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/set-item.js.map changed, reloading triggers"}}
+[debug] [2020-05-22T15:55:44.817Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/set-item.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/set-item.js changed, reloading triggers"}}
+[debug] [2020-05-22T15:55:44.817Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2020-05-22T15:55:44.818Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2020-05-22T15:55:45.819Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (~diagnostic~)"}}
+[debug] [2020-05-22T15:55:45.819Z] [worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: FINISHING"}}
+[debug] [2020-05-22T15:55:45.838Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1"}}
+[debug] [2020-05-22T15:55:45.838Z] [worker-pool] Cleaned up workers for setItem: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for setItem: 1 --> 0"}}
+[debug] [2020-05-22T15:55:45.838Z] [worker-pool] Cleaned up workers for getItem: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for getItem: 1 --> 0"}}
+[debug] [2020-05-22T15:55:45.888Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2020-05-22T15:55:45.889Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=2"}}
+[debug] [2020-05-22T15:55:45.889Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2020-05-22T15:55:45.895Z] [worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: Assigning socketPath: /var/folders/pw/qn1rbv5x1bgcylplb0wzhytm0000gn/T/fire_emu_2720.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: Assigning socketPath: /var/folders/pw/qn1rbv5x1bgcylplb0wzhytm0000gn/T/fire_emu_2720.sock"}}
+[debug] [2020-05-22T15:55:45.895Z] [worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: BUSY"}}
+[debug] [2020-05-22T15:55:45.902Z] [worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: exited"}}
+[debug] [2020-05-22T15:55:45.902Z] [worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-79aa0d9d-aed3-4f6c-a830-7ee091ab3555]: FINISHED"}}
+[debug] [2020-05-22T15:55:46.609Z] [runtime-status] [2720] Functions runtime initialized. {"cwd":"/Users/eldad/projects/cloud-local-storage/packages/app/functions","node_version":"10.15.1"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] Functions runtime initialized. {\"cwd\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions\",\"node_version\":\"10.15.1\"}"}}
+[debug] [2020-05-22T15:55:46.613Z] [runtime-status] [2720] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] Disabled runtime features: undefined"}}
+[debug] [2020-05-22T15:55:46.614Z] [runtime-status] [2720] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2020-05-22T15:55:46.619Z] [runtime-status] [2720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T15:55:46.624Z] [runtime-status] [2720] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2020-05-22T15:55:46.738Z] [runtime-status] [2720] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] Checked functions.config() {\"config\":{}}"}}
+[debug] [2020-05-22T15:55:46.740Z] [runtime-status] [2720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T15:55:46.742Z] [runtime-status] [2720] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2020-05-22T15:55:46.742Z] [runtime-status] [2720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T15:55:46.745Z] [runtime-status] [2720] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2020-05-22T15:55:46.748Z] [runtime-status] [2720] initializeApp(DEFAULT) {"databaseURL":"https://cloud-local-storage.firebaseio.com","storageBucket":"cloud-local-storage.appspot.com","projectId":"cloud-local-storage"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [2720] initializeApp(DEFAULT) {\"databaseURL\":\"https://cloud-local-storage.firebaseio.com\",\"storageBucket\":\"cloud-local-storage.appspot.com\",\"projectId\":\"cloud-local-storage\"}"}}
+[debug] [2020-05-22T15:55:47.310Z] [worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: IDLE"}}
+[debug] [2020-05-22T15:56:33.142Z] May 22, 2020 6:56:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:56:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:57:33.181Z] May 22, 2020 6:57:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:57:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:58:33.219Z] May 22, 2020 6:58:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:58:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T15:59:33.280Z] May 22, 2020 6:59:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 6:59:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:00:33.344Z] May 22, 2020 7:00:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:00:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:01:33.397Z] May 22, 2020 7:01:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:01:33 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:02:48.033Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/cors-options.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/cors-options.js.map changed, reloading triggers"}}
+[debug] [2020-05-22T16:02:48.034Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/cors-options.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/cors-options.js changed, reloading triggers"}}
+[debug] [2020-05-22T16:02:48.034Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/get-item.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/get-item.js.map changed, reloading triggers"}}
+[debug] [2020-05-22T16:02:48.034Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/get-item.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/get-item.js changed, reloading triggers"}}
+[debug] [2020-05-22T16:02:48.035Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/set-item.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/set-item.js.map changed, reloading triggers"}}
+[debug] [2020-05-22T16:02:48.035Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/set-item.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/functions/set-item.js changed, reloading triggers"}}
+[debug] [2020-05-22T16:02:48.035Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2020-05-22T16:02:48.036Z] File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/eldad/projects/cloud-local-storage/packages/app/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2020-05-22T16:02:49.054Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (~diagnostic~)"}}
+[debug] [2020-05-22T16:02:49.058Z] [worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: FINISHING"}}
+[debug] [2020-05-22T16:02:49.058Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1"}}
+[debug] [2020-05-22T16:02:49.088Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2020-05-22T16:02:49.088Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=2"}}
+[debug] [2020-05-22T16:02:49.088Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2020-05-22T16:02:49.090Z] [worker-~diagnostic~-e92ab126-031a-458c-94a0-842f701b5d60]: Assigning socketPath: /var/folders/pw/qn1rbv5x1bgcylplb0wzhytm0000gn/T/fire_emu_11657.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-e92ab126-031a-458c-94a0-842f701b5d60]: Assigning socketPath: /var/folders/pw/qn1rbv5x1bgcylplb0wzhytm0000gn/T/fire_emu_11657.sock"}}
+[debug] [2020-05-22T16:02:49.092Z] [worker-~diagnostic~-e92ab126-031a-458c-94a0-842f701b5d60]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-e92ab126-031a-458c-94a0-842f701b5d60]: BUSY"}}
+[debug] [2020-05-22T16:02:49.093Z] [worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: exited"}}
+[debug] [2020-05-22T16:02:49.093Z] [worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-d0458f57-f63c-48d4-a73a-b39376f39b05]: FINISHED"}}
+[debug] [2020-05-22T16:02:49.577Z] [runtime-status] [11657] Functions runtime initialized. {"cwd":"/Users/eldad/projects/cloud-local-storage/packages/app/functions","node_version":"10.15.1"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] Functions runtime initialized. {\"cwd\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions\",\"node_version\":\"10.15.1\"}"}}
+[debug] [2020-05-22T16:02:49.581Z] [runtime-status] [11657] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] Disabled runtime features: undefined"}}
+[debug] [2020-05-22T16:02:49.602Z] [runtime-status] [11657] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2020-05-22T16:02:49.609Z] [runtime-status] [11657] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T16:02:49.613Z] [runtime-status] [11657] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2020-05-22T16:02:49.670Z] [runtime-status] [11657] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] Checked functions.config() {\"config\":{}}"}}
+[debug] [2020-05-22T16:02:49.674Z] [runtime-status] [11657] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T16:02:49.675Z] [runtime-status] [11657] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2020-05-22T16:02:49.676Z] [runtime-status] [11657] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T16:02:49.678Z] [runtime-status] [11657] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2020-05-22T16:02:49.679Z] [runtime-status] [11657] initializeApp(DEFAULT) {"databaseURL":"https://cloud-local-storage.firebaseio.com","storageBucket":"cloud-local-storage.appspot.com","projectId":"cloud-local-storage"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [11657] initializeApp(DEFAULT) {\"databaseURL\":\"https://cloud-local-storage.firebaseio.com\",\"storageBucket\":\"cloud-local-storage.appspot.com\",\"projectId\":\"cloud-local-storage\"}"}}
+[debug] [2020-05-22T16:02:50.008Z] May 22, 2020 7:02:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:02:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:02:50.071Z] [worker-~diagnostic~-e92ab126-031a-458c-94a0-842f701b5d60]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-e92ab126-031a-458c-94a0-842f701b5d60]: IDLE"}}
+[debug] [2020-05-22T16:03:50.052Z] May 22, 2020 7:03:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:03:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:04:50.405Z] May 22, 2020 7:04:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:04:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:05:50.471Z] May 22, 2020 7:05:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:05:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:06:50.531Z] May 22, 2020 7:06:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:06:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:07:50.585Z] May 22, 2020 7:07:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:07:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:08:50.625Z] May 22, 2020 7:08:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:08:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:09:50.652Z] May 22, 2020 7:09:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:09:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:10:50.702Z] May 22, 2020 7:10:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:10:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:11:50.751Z] May 22, 2020 7:11:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:11:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:12:50.793Z] May 22, 2020 7:12:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:12:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:13:50.900Z] May 22, 2020 7:13:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:13:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:14:50.938Z] May 22, 2020 7:14:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:14:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:15:50.970Z] May 22, 2020 7:15:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:15:50 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:16:51.050Z] May 22, 2020 7:16:51 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:16:51 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:17:51.096Z] May 22, 2020 7:17:51 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:17:51 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:18:51.149Z] May 22, 2020 7:18:51 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:18:51 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T16:19:51.211Z] May 22, 2020 7:19:51 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 7:19:51 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
