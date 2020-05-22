@@ -1,0 +1,80 @@
+[debug] [2020-05-22T11:57:48.564Z] ----------------------------------------------------------------------
+[debug] [2020-05-22T11:57:48.566Z] Command:       /Users/eldad/.nvm/versions/node/v10.15.1/bin/node /Users/eldad/.nvm/versions/node/v10.15.1/bin/firebase emulators:start
+[debug] [2020-05-22T11:57:48.566Z] CLI Version:   8.4.0
+[debug] [2020-05-22T11:57:48.566Z] Platform:      darwin
+[debug] [2020-05-22T11:57:48.566Z] Node Version:  v10.15.1
+[debug] [2020-05-22T11:57:48.567Z] Time:          Fri May 22 2020 14:57:48 GMT+0300 (Israel Daylight Time)
+[debug] [2020-05-22T11:57:48.567Z] ----------------------------------------------------------------------
+[debug] [2020-05-22T11:57:48.567Z] 
+[debug] [2020-05-22T11:57:48.575Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-22T11:57:48.575Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, hosting"}}
+[warn] ⚠  hub: emulator hub unable to start on port 4400, starting on 4401 instead. {"metadata":{"emulator":{"name":"hub"},"message":"emulator hub unable to start on port 4400, starting on 4401 instead."}}
+[debug] [2020-05-22T11:57:48.622Z] [hub] writing locator at /var/folders/pw/qn1rbv5x1bgcylplb0wzhytm0000gn/T/hub-cloud-local-storage.json
+[info] ✔  functions: Using node@10 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@10 from host."}}
+[debug] [2020-05-22T11:57:48.659Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2020-05-22T11:57:48.659Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2020-05-22T11:57:48.659Z] Starting Firestore Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/eldad/.cache/firebase/emulators/cloud-firestore-emulator-v1.11.4.jar","--host","localhost","--port",8100,"--rules","/Users/eldad/projects/cloud-local-storage/packages/app/firestore.rules","--functions_emulator","localhost:5011"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/eldad/.cache/firebase/emulators/cloud-firestore-emulator-v1.11.4.jar\",\"--host\",\"localhost\",\"--port\",8100,\"--rules\",\"/Users/eldad/projects/cloud-local-storage/packages/app/firestore.rules\",\"--functions_emulator\",\"localhost:5011\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2020-05-22T11:57:50.176Z] API endpoint: http://localhost {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://localhost"}}
+[debug] [2020-05-22T11:57:50.177Z] :8100
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8100
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":":8100\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=localhost:8100\n\nDev App Server is now running.\n\n"}}
+[debug] [2020-05-22T11:57:50.200Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cloud-local-storage/webApps/-/config  
+ 
+[debug] [2020-05-22T11:57:50.914Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 22 May 2020 11:57:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting: Local server: http://localhost:5010 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5010\u001b[22m\u001b[24m"}}
+[debug] [2020-05-22T11:57:51.485Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2020-05-22T11:57:51.485Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2020-05-22T11:57:51.485Z] Starting Emulator UI with command {"binary":"node","args":["/Users/eldad/.cache/firebase/emulators/ui-v1.0.0/server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/eldad/.cache/firebase/emulators/ui-v1.0.0/server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2020-05-22T11:57:51.659Z] Web / API server started at http://localhost:9292
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:9292\n"}}
+[info] i  functions: Watching "/Users/eldad/projects/cloud-local-storage/packages/app/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/eldad/projects/cloud-local-storage/packages/app/functions\" for Cloud Functions..."}}
+[debug] [2020-05-22T11:57:51.755Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2020-05-22T11:57:51.755Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2020-05-22T11:57:51.756Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2020-05-22T11:57:51.756Z] [worker-~diagnostic~-39518a80-47a3-418e-a9dc-e817fd4c7540]: Assigning socketPath: /var/folders/pw/qn1rbv5x1bgcylplb0wzhytm0000gn/T/fire_emu_34478.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-39518a80-47a3-418e-a9dc-e817fd4c7540]: Assigning socketPath: /var/folders/pw/qn1rbv5x1bgcylplb0wzhytm0000gn/T/fire_emu_34478.sock"}}
+[debug] [2020-05-22T11:57:51.756Z] [worker-~diagnostic~-39518a80-47a3-418e-a9dc-e817fd4c7540]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-39518a80-47a3-418e-a9dc-e817fd4c7540]: BUSY"}}
+[debug] [2020-05-22T11:57:52.334Z] [runtime-status] [34478] Functions runtime initialized. {"cwd":"/Users/eldad/projects/cloud-local-storage/packages/app/functions","node_version":"10.15.1"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [34478] Functions runtime initialized. {\"cwd\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions\",\"node_version\":\"10.15.1\"}"}}
+[debug] [2020-05-22T11:57:52.336Z] [runtime-status] [34478] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [34478] Disabled runtime features: undefined"}}
+[debug] [2020-05-22T11:57:52.341Z] [runtime-status] [34478] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [34478] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2020-05-22T11:57:52.343Z] [runtime-status] [34478] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [34478] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T11:57:52.348Z] [runtime-status] [34478] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [34478] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2020-05-22T11:57:52.404Z] [runtime-status] [34478] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [34478] Checked functions.config() {\"config\":{}}"}}
+[debug] [2020-05-22T11:57:52.405Z] [runtime-status] [34478] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [34478] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T11:57:52.406Z] [runtime-status] [34478] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [34478] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2020-05-22T11:57:52.406Z] [runtime-status] [34478] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [34478] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2020-05-22T11:57:52.406Z] [runtime-status] [34478] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [34478] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"8.12.1\",\"resolution\":\"/Users/eldad/projects/cloud-local-storage/packages/app/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2020-05-22T11:57:52.410Z] [worker-~diagnostic~-39518a80-47a3-418e-a9dc-e817fd4c7540]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-39518a80-47a3-418e-a9dc-e817fd4c7540]: IDLE"}}
+[info] ✔  functions[helloWorld]: http function initialized (http://localhost:5011/cloud-local-storage/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5011/cloud-local-storage/us-central1/helloWorld)."}}
+[info] 
+┌───────────────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! View status and logs at http://localhost:9292 │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5011 │ http://localhost:9292/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Firestore │ localhost:8100 │ http://localhost:9292/firestore │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ localhost:5010 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Other reserved ports: 4401, 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2020-05-22T11:57:54.094Z] May 22, 2020 2:57:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 2:57:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2020-05-22T11:57:54.347Z] May 22, 2020 2:57:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 22, 2020 2:57:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
