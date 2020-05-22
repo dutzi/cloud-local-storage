@@ -47,6 +47,17 @@ var fs_extra_1 = __importDefault(require("fs-extra"));
 var app_1 = __importDefault(require("firebase/app"));
 var path_1 = __importDefault(require("path"));
 require("firebase/auth");
+require("firebase/firestore");
+require("firebase/functions");
+var os_1 = __importDefault(require("os"));
+var node_fetch_1 = __importDefault(require("node-fetch"));
+// const BASE_URL = 'http://localhost:5011/cloud-local-storage/us-central1';
+var isDeveloping = true;
+var BASE_URL = isDeveloping
+    ? 'http://localhost:5011/cloud-local-storage/us-central1'
+    : '';
+var rcFileName = '.clsrc';
+var credsFilePath = path_1.default.resolve(os_1.default.homedir(), rcFileName);
 var firebaseConfig = {
     apiKey: 'AIzaSyCig23UBEJNf6o1gItzQWm3tPxqP868vGI',
     authDomain: 'cloud-local-storage.firebaseapp.com',
@@ -58,15 +69,24 @@ var firebaseConfig = {
     measurementId: 'G-7XSQF4DH9D',
 };
 app_1.default.initializeApp(firebaseConfig);
+if (isDeveloping) {
+    app_1.default.functions().useFunctionsEmulator('http://localhost:5011');
+    app_1.default.firestore().settings({
+        host: 'localhost:8100',
+        ssl: false,
+    });
+}
 var argv = 
 // .alias('h', 'help')
 // .epilog('copyright 2019').argv;
 yargs_1.default
     .usage('Usage: $0 <command> [options]')
-    .command('list', 'List all tokens')
-    .command('create', 'Create new token')
-    .command('signup', 'Sign up')
-    .command('signin', 'Sign in')
+    .command('init', 'Initialize Cloud Local Storage')
+    .command('list', 'List all storages')
+    .command('create', 'Create new storage')
+    // .command('signup', 'Sign up')
+    // .command('signin', 'Sign in')
+    .command('resetpass', 'Send reset password link')
     .demandCommand(1)
     // .example('$0 count -f foo.js', 'count the lines in the given file')
     // .alias('f', 'file')
@@ -75,44 +95,269 @@ yargs_1.default
     // .demandOption(['f'])
     .help('h').argv;
 var command = argv._[0];
-if (command === 'signup') {
-    inquirer_1.default
-        .prompt([{ type: 'input', name: 'email', message: 'Enter your email' }])
-        .then(function (answers) { return __awaiter(void 0, void 0, void 0, function () {
-        var email, token, res, homedir, credsFilePath;
+function signUp() {
+    var _this = this;
+    return inquirer_1.default
+        .prompt([
+        { type: 'input', name: 'email', message: 'Enter your email' },
+        { type: 'password', name: 'password', message: 'Choose a password' },
+        {
+            type: 'password',
+            name: 'passwordVerification',
+            message: 'Re-type your password',
+        },
+    ])
+        .then(function (answers) { return __awaiter(_this, void 0, void 0, function () {
+        var email, password, passwordVerification, res;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    email = answers.email;
-                    token = uuidv4_1.uuid();
+                    email = answers.email, password = answers.password, passwordVerification = answers.passwordVerification;
+                    if (password !== passwordVerification) {
+                        console.log('Passwords mismatch');
+                        throw new Error();
+                    }
                     return [4 /*yield*/, app_1.default
                             .auth()
-                            .createUserWithEmailAndPassword(email, token)];
+                            .createUserWithEmailAndPassword(email, password)];
                 case 1:
                     res = _a.sent();
                     if (!res.user) {
                         console.log('Error: Could not create user');
-                        return [2 /*return*/];
+                        throw new Error();
                     }
                     console.log("Created an account for " + email);
-                    console.log("Your (secret) token is: " + token);
-                    homedir = require('os').homedir();
-                    credsFilePath = path_1.default.resolve(homedir, '.cls');
-                    fs_extra_1.default.outputJsonSync(credsFilePath, { email: email, token: token });
-                    console.log("Your credentials were saved to: " + credsFilePath);
-                    return [2 /*return*/];
+                    // fs.outputJsonSync(credsFilePath, { email, token });
+                    // console.log(`Your credentials were saved to: ${credsFilePath}`);
+                    return [2 /*return*/, { email: email, password: password }];
             }
         });
     }); })
         .catch(function (err) { return console.log(err.message); });
 }
-// if (command === 'signin') {
-//   inquirer
-//     .prompt([
-//       { type: 'input', name: 'email', message: 'Enter your email' },
-//       { type: 'input', name: 'token', message: 'Enter your auth token' },
-//     ])
-//     .then((answers) => {
-//       // Use user feedback for... whatever!!
-//     });
-// }
+function signIn() {
+    var _this = this;
+    return inquirer_1.default
+        .prompt([
+        { type: 'input', name: 'email', message: 'Enter your email' },
+        { type: 'password', name: 'password', message: 'Enter your password' },
+    ])
+        .then(function (answers) { return __awaiter(_this, void 0, void 0, function () {
+        var email, password, res;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    email = answers.email, password = answers.password;
+                    return [4 /*yield*/, app_1.default
+                            .auth()
+                            .signInWithEmailAndPassword(email, password)];
+                case 1:
+                    res = _a.sent();
+                    if (!res.user) {
+                        throw { message: 'User not found' };
+                    }
+                    return [2 /*return*/, { email: email, password: password }];
+            }
+        });
+    }); })
+        .catch(function (err) {
+        console.log(err.message);
+    });
+}
+function saveToken(token) {
+    fs_extra_1.default.outputJsonSync(credsFilePath, { token: token });
+}
+function loadToken() {
+    var _a;
+    try {
+        return (_a = fs_extra_1.default.readJsonSync(credsFilePath)) === null || _a === void 0 ? void 0 : _a.token;
+    }
+    catch (err) {
+        return undefined;
+    }
+}
+if (command === 'init') {
+    (function () { return __awaiter(void 0, void 0, void 0, function () {
+        var getAnotherToken;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    if (!loadToken()) return [3 /*break*/, 2];
+                    return [4 /*yield*/, inquirer_1.default.prompt([
+                            {
+                                type: 'list',
+                                name: 'getAnotherToken',
+                                message: "Token found in ~/" + rcFileName + ", would you like to use it?",
+                                choices: [
+                                    { name: 'Yes, use existing token', value: 'use-existing' },
+                                    {
+                                        name: 'No, I would like to generate a new token',
+                                        value: 'new-token',
+                                    },
+                                ],
+                            },
+                        ])];
+                case 1:
+                    getAnotherToken = (_a.sent()).getAnotherToken;
+                    if (getAnotherToken === 'use-existing') {
+                        console.log('Cloud Local Storage initialized');
+                        return [2 /*return*/];
+                    }
+                    _a.label = 2;
+                case 2:
+                    inquirer_1.default
+                        .prompt([
+                        {
+                            type: 'list',
+                            name: 'signInOrSignUp',
+                            message: 'Do you already have an account?',
+                            choices: [
+                                { name: 'Yes, sign me in', value: 'sign-in' },
+                                { name: 'No, I would like to sign up', value: 'signup' },
+                            ],
+                        },
+                    ])
+                        .then(function (answers) { return __awaiter(void 0, void 0, void 0, function () {
+                        var signInOrSignUp;
+                        return __generator(this, function (_a) {
+                            signInOrSignUp = answers.signInOrSignUp;
+                            if (signInOrSignUp === 'sign-in') {
+                                return [2 /*return*/, signIn()];
+                            }
+                            else {
+                                return [2 /*return*/, signUp()];
+                            }
+                            return [2 /*return*/];
+                        });
+                    }); })
+                        .then(function () { return __awaiter(void 0, void 0, void 0, function () {
+                        var user, token;
+                        return __generator(this, function (_a) {
+                            switch (_a.label) {
+                                case 0:
+                                    user = app_1.default.auth().currentUser;
+                                    if (!user) {
+                                        throw { message: 'User not found' };
+                                    }
+                                    token = uuidv4_1.uuid();
+                                    return [4 /*yield*/, app_1.default.firestore().doc("users/" + user.uid).set({ token: token })];
+                                case 1:
+                                    _a.sent();
+                                    saveToken(token);
+                                    console.log('Cloud Local Storage initialized');
+                                    console.log("Saved token to ~/" + rcFileName);
+                                    process.exit(0);
+                                    return [2 /*return*/];
+                            }
+                        });
+                    }); })
+                        .catch(function (err) {
+                        console.log(err.message);
+                    });
+                    return [2 /*return*/];
+            }
+        });
+    }); })();
+}
+if (command === 'resetpass') {
+    inquirer_1.default
+        .prompt([{ type: 'input', name: 'email', message: 'Enter your email' }])
+        .then(function (answers) { return __awaiter(void 0, void 0, void 0, function () {
+        var email;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    email = answers.email;
+                    return [4 /*yield*/, app_1.default.auth().sendPasswordResetEmail(email, {
+                            url: 'https://cls.tools/reset-password',
+                        })];
+                case 1:
+                    _a.sent();
+                    console.log('Check you inbox for instructions');
+                    return [2 /*return*/];
+            }
+        });
+    }); })
+        .catch(function (err) {
+        console.log(err.message);
+    });
+}
+if (command === 'list') {
+    try {
+        (function () { return __awaiter(void 0, void 0, void 0, function () {
+            var token, getStoragesResult, storages;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        token = loadToken();
+                        if (!token) {
+                            console.log('Token not found, run `cls init` first');
+                            return [2 /*return*/];
+                        }
+                        return [4 /*yield*/, node_fetch_1.default(BASE_URL + "/getStorages?token=" + token)];
+                    case 1:
+                        getStoragesResult = _a.sent();
+                        return [4 /*yield*/, getStoragesResult.json()];
+                    case 2:
+                        storages = (_a.sent()).storages;
+                        if (storages.length === 0) {
+                            console.log('No storages found');
+                            return [2 /*return*/];
+                        }
+                        console.log('Found the following storages:');
+                        console.log(storages
+                            .map(function (storage) {
+                            return '  - ' + storage;
+                        })
+                            .join('\n'));
+                        process.exit(0);
+                        return [2 /*return*/];
+                }
+            });
+        }); })();
+    }
+    catch (err) {
+        console.log({ err: err });
+        console.log(err);
+    }
+}
+if (command === 'create') {
+    inquirer_1.default
+        .prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Choose a name for your storage (leave empty to name automatically):',
+        },
+    ])
+        .then(function (answers) { return __awaiter(void 0, void 0, void 0, function () {
+        var token, createStorageResult, storageName;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    token = loadToken();
+                    if (!token) {
+                        console.log('Token not found, run `cls init` first');
+                        return [2 /*return*/];
+                    }
+                    return [4 /*yield*/, node_fetch_1.default(BASE_URL + "/createStorage", {
+                            method: 'post',
+                            body: JSON.stringify({ token: token, name: answers.name }),
+                        })];
+                case 1:
+                    createStorageResult = _a.sent();
+                    return [4 /*yield*/, createStorageResult.json()];
+                case 2:
+                    storageName = (_a.sent()).name;
+                    console.log("Created new storage: " + storageName);
+                    process.exit(0);
+                    return [2 /*return*/];
+            }
+        });
+    }); })
+        .catch(function (err) {
+        if (err.message) {
+            console.log(err.message);
+        }
+    });
+}
