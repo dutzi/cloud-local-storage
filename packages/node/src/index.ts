@@ -18,3 +18,5 @@ createCloudLocalStorageClient.list = list;
 module.exports = createCloudLocalStorageClient;
 
 export default createCloudLocalStorageClient;
+
+export { getItem, setItem, create, list };

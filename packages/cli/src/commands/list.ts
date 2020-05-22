@@ -1,6 +1,5 @@
-import fetch from 'node-fetch';
 import loadToken from '../utils/load-token';
-import { BASE_URL } from './../utils/consts';
+import * as cls from 'cloud-local-storage';
 
 export default function list() {
   try {
@@ -12,21 +11,18 @@ export default function list() {
         return;
       }
 
-      const getStoragesResult = await fetch(
-        `${BASE_URL}/getStorages?token=${token}`
-      );
-      const storages = (await getStoragesResult.json()).storages;
+      const keys = await cls.list(token);
 
-      if (storages.length === 0) {
+      if (keys.length === 0) {
         console.log('No storages found');
         return;
       }
 
       console.log('Found the following storages:');
       console.log(
-        storages
-          .map((storage: string) => {
-            return '  - ' + storage;
+        keys
+          .map((key: string) => {
+            return '  - ' + key;
           })
           .join('\n')
       );

@@ -8,6 +8,8 @@ import list from './commands/list';
 import create from './commands/create';
 import resetPassword from './commands/reset-password';
 import init from './commands/init';
+import getItem from './commands/get-item';
+import setItem from './commands/set-item';
 
 const isDeveloping = process.env.NODE_ENV === 'development';
 
@@ -35,7 +37,9 @@ const argv = yargs
   .usage('Usage: $0 <command> [options]')
   .command('init', 'Initialize Cloud Local Storage')
   .command('list', 'List all storages')
-  .command('create', 'Create new storage')
+  .command('create', 'Create new storage item')
+  .command('get', 'Get storage item')
+  .command('set', 'Set storage item')
   .command('resetpass', 'Send reset password link')
   .demandCommand(1)
   .help('h').argv;
@@ -56,4 +60,12 @@ if (command === 'list') {
 
 if (command === 'create') {
   create();
+}
+
+if (command === 'get') {
+  getItem();
+}
+
+if (command === 'set') {
+  setItem();
 }

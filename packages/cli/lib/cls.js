@@ -12,6 +12,8 @@ var list_1 = __importDefault(require("./commands/list"));
 var create_1 = __importDefault(require("./commands/create"));
 var reset_password_1 = __importDefault(require("./commands/reset-password"));
 var init_1 = __importDefault(require("./commands/init"));
+var get_item_1 = __importDefault(require("./commands/get-item"));
+var set_item_1 = __importDefault(require("./commands/set-item"));
 var isDeveloping = process.env.NODE_ENV === 'development';
 var firebaseConfig = {
     apiKey: 'AIzaSyCig23UBEJNf6o1gItzQWm3tPxqP868vGI',
@@ -34,7 +36,9 @@ var argv = yargs_1.default
     .usage('Usage: $0 <command> [options]')
     .command('init', 'Initialize Cloud Local Storage')
     .command('list', 'List all storages')
-    .command('create', 'Create new storage')
+    .command('create', 'Create new storage item')
+    .command('get', 'Get storage item')
+    .command('set', 'Set storage item')
     .command('resetpass', 'Send reset password link')
     .demandCommand(1)
     .help('h').argv;
@@ -50,4 +54,10 @@ if (command === 'list') {
 }
 if (command === 'create') {
     create_1.default();
+}
+if (command === 'get') {
+    get_item_1.default();
+}
+if (command === 'set') {
+    set_item_1.default();
 }

@@ -2,14 +2,13 @@ import inquirer from 'inquirer';
 import loadToken from '../utils/load-token';
 import * as cls from 'cloud-local-storage';
 
-export default function create() {
+export default function getItem() {
   inquirer
     .prompt([
       {
         type: 'input',
         name: 'key',
-        message:
-          'Type a key for your storage (leave empty to name it automatically):',
+        message: 'Type a key for your storage:',
       },
     ])
     .then(async (answers) => {
@@ -20,9 +19,9 @@ export default function create() {
         return;
       }
 
-      const createdKey = await cls.create(answers.key, token);
+      const data = await cls.getItem(answers.key, token);
 
-      console.log(`Created new storage: ${createdKey}`);
+      console.log(JSON.stringify(data, undefined, 2));
 
       process.exit(0);
     })
