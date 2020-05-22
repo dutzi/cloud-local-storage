@@ -1,7 +1,7 @@
-import createLocalStorage from '../../node/lib/index';
+import createLocalStorage from 'cloud-local-storage';
 
 const localStorage = createLocalStorage('0000');
 
-localStorage.setItem('my-data-key', { a: 1 }).then(() => {
+localStorage.setItem('my-data-key', { a: 1, b: 3 }).then(() => {
   return localStorage.getItem('my-data-key').then((res) => console.log(res));
 });

@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "declaration": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -12,7 +13,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
-    "jsx": "react",
+    "noEmit": false,
     "outDir": "lib"
   },
   "include": ["./src"]

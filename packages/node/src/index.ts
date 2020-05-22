@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-module.exports = function createCloudLocalStorageClient(token: string) {
+function createCloudLocalStorageClient(token: string) {
   function getItem(key: string) {
     return fetch(
       `http://localhost:5011/cloud-local-storage/us-central1/getItem?key=${key}&token=${token}`
@@ -22,6 +22,8 @@ module.exports = function createCloudLocalStorageClient(token: string) {
   }
 
   return { getItem, setItem };
-};
+}
 
-export default module.exports;
+module.exports = createCloudLocalStorageClient;
+
+export default createCloudLocalStorageClient;
