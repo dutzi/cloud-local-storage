@@ -32,9 +32,9 @@ export default functions.https.onRequest(async (req, res) => {
 
   const userDoc = userDocs.docs[0];
 
-  const storageName = name || uuid();
+  const key = name || uuid();
 
-  await userDoc.ref.collection('storages').doc(storageName).create({});
+  await userDoc.ref.collection('storages').doc(key).create({});
 
-  res.send({ name: storageName });
+  res.send({ key });
 });

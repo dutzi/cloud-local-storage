@@ -1,6 +1,7 @@
 import * as admin from 'firebase-admin';
 import * as functions from 'firebase-functions';
 import corsOptions from '../cors-options';
+import getUserByToken from '../utils/get-user-by-token';
 
 const cors = require('cors')(corsOptions);
 
@@ -9,15 +10,6 @@ const firestore = admin.firestore();
 export default functions.https.onRequest((req, res) => {
   cors(req, res, async () => {
     const { token, key } = req.query;
-
-    if (!token) {
-      res.send({
-        error: true,
-        errorCode: 'missing-token',
-      });
-
-      return;
-    }
 
     if (!key) {
       res.send({
@@ -28,7 +20,33 @@ export default functions.https.onRequest((req, res) => {
       return;
     }
 
-    const data = await firestore.doc(`${token}/${key}`).get();
+    let data: FirebaseFirestore.DocumentSnapshot<FirebaseFirestore.DocumentData>;
+
+    if (token) {
+      if (typeof token !== 'string') {
+        res.send({
+          error: true,
+          errorCode: 'token-invalid',
+        });
+
+        return;
+      }
+
+      const user = await getUserByToken(token);
+
+      if (!user) {
+        res.send({
+          error: true,
+          errorCode: 'token-incorrect',
+        });
+
+        return;
+      }
+
+      data = await firestore.doc(`/users/${user.id}/data/${key}`).get();
+    } else {
+      data = await firestore.doc(`/data/${key}`).get();
+    }
 
     if (!data.exists) {
       res.send({

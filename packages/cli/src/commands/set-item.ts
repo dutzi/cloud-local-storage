@@ -25,9 +25,13 @@ export default function setItem() {
         return;
       }
 
-      const key = await cls.setItem(answers.key, answers.data, token);
+      const res = await cls.setItem(
+        answers.key,
+        JSON.parse(answers.data),
+        token
+      );
 
-      console.log(`Saved with the following key: ${key}`);
+      console.log(`Saved with the following key: ${res.key}`);
       process.exit(0);
     })
     .catch((err) => {
