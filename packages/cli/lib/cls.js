@@ -48,11 +48,10 @@ var app_1 = __importDefault(require("firebase/app"));
 var path_1 = __importDefault(require("path"));
 require("firebase/auth");
 require("firebase/firestore");
-require("firebase/functions");
 var os_1 = __importDefault(require("os"));
 var node_fetch_1 = __importDefault(require("node-fetch"));
 // const BASE_URL = 'http://localhost:5011/cloud-local-storage/us-central1';
-var isDeveloping = true;
+var isDeveloping = process.env.NODE_ENV === 'development';
 var BASE_URL = isDeveloping
     ? 'http://localhost:5011/cloud-local-storage/us-central1'
     : '';
@@ -70,29 +69,18 @@ var firebaseConfig = {
 };
 app_1.default.initializeApp(firebaseConfig);
 if (isDeveloping) {
-    app_1.default.functions().useFunctionsEmulator('http://localhost:5011');
     app_1.default.firestore().settings({
         host: 'localhost:8100',
         ssl: false,
     });
 }
-var argv = 
-// .alias('h', 'help')
-// .epilog('copyright 2019').argv;
-yargs_1.default
+var argv = yargs_1.default
     .usage('Usage: $0 <command> [options]')
     .command('init', 'Initialize Cloud Local Storage')
     .command('list', 'List all storages')
     .command('create', 'Create new storage')
-    // .command('signup', 'Sign up')
-    // .command('signin', 'Sign in')
     .command('resetpass', 'Send reset password link')
     .demandCommand(1)
-    // .example('$0 count -f foo.js', 'count the lines in the given file')
-    // .alias('f', 'file')
-    // .nargs('f', 1)
-    // .describe('f', 'Load a file')
-    // .demandOption(['f'])
     .help('h').argv;
 var command = argv._[0];
 function signUp() {
@@ -127,8 +115,6 @@ function signUp() {
                         throw new Error();
                     }
                     console.log("Created an account for " + email);
-                    // fs.outputJsonSync(credsFilePath, { email, token });
-                    // console.log(`Your credentials were saved to: ${credsFilePath}`);
                     return [2 /*return*/, { email: email, password: password }];
             }
         });

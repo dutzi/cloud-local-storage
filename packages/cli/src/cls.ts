@@ -8,12 +8,11 @@ import firebase from 'firebase/app';
 import path from 'path';
 import 'firebase/auth';
 import 'firebase/firestore';
-import 'firebase/functions';
 import os from 'os';
 import fetch from 'node-fetch';
 
 // const BASE_URL = 'http://localhost:5011/cloud-local-storage/us-central1';
-const isDeveloping = true;
+const isDeveloping = process.env.NODE_ENV === 'development';
 
 const BASE_URL = isDeveloping
   ? 'http://localhost:5011/cloud-local-storage/us-central1'
@@ -36,31 +35,20 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 if (isDeveloping) {
-  firebase.functions().useFunctionsEmulator('http://localhost:5011');
   firebase.firestore().settings({
     host: 'localhost:8100',
     ssl: false,
   });
 }
 
-const argv =
-  // .alias('h', 'help')
-  // .epilog('copyright 2019').argv;
-  yargs
-    .usage('Usage: $0 <command> [options]')
-    .command('init', 'Initialize Cloud Local Storage')
-    .command('list', 'List all storages')
-    .command('create', 'Create new storage')
-    // .command('signup', 'Sign up')
-    // .command('signin', 'Sign in')
-    .command('resetpass', 'Send reset password link')
-    .demandCommand(1)
-    // .example('$0 count -f foo.js', 'count the lines in the given file')
-    // .alias('f', 'file')
-    // .nargs('f', 1)
-    // .describe('f', 'Load a file')
-    // .demandOption(['f'])
-    .help('h').argv;
+const argv = yargs
+  .usage('Usage: $0 <command> [options]')
+  .command('init', 'Initialize Cloud Local Storage')
+  .command('list', 'List all storages')
+  .command('create', 'Create new storage')
+  .command('resetpass', 'Send reset password link')
+  .demandCommand(1)
+  .help('h').argv;
 
 const command = argv._[0];
 
@@ -94,8 +82,6 @@ function signUp() {
 
       console.log(`Created an account for ${email}`);
 
-      // fs.outputJsonSync(credsFilePath, { email, token });
-      // console.log(`Your credentials were saved to: ${credsFilePath}`);
       return { email, password };
     })
     .catch((err) => console.log(err.message));
@@ -118,8 +104,6 @@ function signIn() {
       }
 
       return { email, password };
-      // fs.outputJsonSync(credsFilePath, { email, token });
-      // console.log(`Successfull signed in as ${email}`);
     })
     .catch((err) => {
       console.log(err.message);
