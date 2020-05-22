@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.1",
+    "@types/inquirer": "^6.5.0",
     "@types/node-fetch": "^2.5.7",
     "@types/uuidv4": "^5.0.0",
     "@types/yargs": "^15.0.5"

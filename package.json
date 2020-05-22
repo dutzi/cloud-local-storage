@@ -1,9 +1,15 @@
 {
   "name": "cloud-local-storage",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/@types/inquirer",
+      "**/@types/inquirer/**"
+    ]
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

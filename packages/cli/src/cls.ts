@@ -1,24 +1,15 @@
 #!/usr/bin/env node
 
 import yargs from 'yargs';
-import inquirer from 'inquirer';
-import { uuid } from 'uuidv4';
-import fs from 'fs-extra';
 import firebase from 'firebase/app';
-import path from 'path';
 import 'firebase/auth';
 import 'firebase/firestore';
-import os from 'os';
-import fetch from 'node-fetch';
+import list from './commands/list';
+import create from './commands/create';
+import resetPassword from './commands/reset-password';
+import init from './commands/init';
 
 const isDeveloping = process.env.NODE_ENV === 'development';
-
-const BASE_URL = isDeveloping
-  ? 'http://localhost:5011/cloud-local-storage/us-central1'
-  : 'https://cls.tools';
-
-const rcFileName = '.clsrc';
-const credsFilePath = path.resolve(os.homedir(), rcFileName);
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCig23UBEJNf6o1gItzQWm3tPxqP868vGI',
@@ -51,224 +42,18 @@ const argv = yargs
 
 const command = argv._[0];
 
-function signUp() {
-  return inquirer
-    .prompt([
-      { type: 'input', name: 'email', message: 'Enter your email' },
-      { type: 'password', name: 'password', message: 'Choose a password' },
-      {
-        type: 'password',
-        name: 'passwordVerification',
-        message: 'Re-type your password',
-      },
-    ])
-    .then(async (answers) => {
-      const { email, password, passwordVerification } = answers;
-
-      if (password !== passwordVerification) {
-        console.log('Passwords mismatch');
-        throw new Error();
-      }
-
-      const res = await firebase
-        .auth()
-        .createUserWithEmailAndPassword(email, password);
-
-      if (!res.user) {
-        console.log('Error: Could not create user');
-        throw new Error();
-      }
-
-      console.log(`Created an account for ${email}`);
-
-      return { email, password };
-    })
-    .catch((err) => console.log(err.message));
-}
-
-function signIn() {
-  return inquirer
-    .prompt([
-      { type: 'input', name: 'email', message: 'Enter your email' },
-      { type: 'password', name: 'password', message: 'Enter your password' },
-    ])
-    .then(async (answers) => {
-      const { email, password } = answers;
-      const res = await firebase
-        .auth()
-        .signInWithEmailAndPassword(email, password);
-
-      if (!res.user) {
-        throw { message: 'User not found' };
-      }
-
-      return { email, password };
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
-}
-
-function saveToken(token: string) {
-  fs.outputJsonSync(credsFilePath, { token });
-}
-
-function loadToken() {
-  try {
-    return fs.readJsonSync(credsFilePath)?.token;
-  } catch (err) {
-    return undefined;
-  }
-}
-
 if (command === 'init') {
-  (async () => {
-    if (loadToken()) {
-      const { getAnotherToken } = await inquirer.prompt([
-        {
-          type: 'list',
-          name: 'getAnotherToken',
-          message: `Token found in ~/${rcFileName}, would you like to use it?`,
-          choices: [
-            { name: 'Yes, use existing token', value: 'use-existing' },
-            {
-              name: 'No, I would like to generate a new token',
-              value: 'new-token',
-            },
-          ],
-        },
-      ]);
-
-      if (getAnotherToken === 'use-existing') {
-        console.log('Cloud Local Storage initialized');
-        return;
-      }
-    }
-
-    inquirer
-      .prompt([
-        {
-          type: 'list',
-          name: 'signInOrSignUp',
-          message: 'Do you already have an account?',
-          choices: [
-            { name: 'Yes, sign me in', value: 'sign-in' },
-            { name: 'No, I would like to sign up', value: 'signup' },
-          ],
-        },
-      ])
-      .then(async (answers) => {
-        const { signInOrSignUp } = answers;
-        if (signInOrSignUp === 'sign-in') {
-          return signIn();
-        } else {
-          return signUp();
-        }
-      })
-      .then(async () => {
-        const user = firebase.auth().currentUser;
-
-        if (!user) {
-          throw { message: 'User not found' };
-        }
-
-        const token = uuid();
-        await firebase.firestore().doc(`users/${user.uid}`).set({ token });
-        saveToken(token);
-        console.log('Cloud Local Storage initialized');
-        console.log(`Saved token to ~/${rcFileName}`);
-        process.exit(0);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  })();
+  init();
 }
 
 if (command === 'resetpass') {
-  inquirer
-    .prompt([{ type: 'input', name: 'email', message: 'Enter your email' }])
-    .then(async (answers) => {
-      const { email } = answers;
-      await firebase.auth().sendPasswordResetEmail(email, {
-        url: 'https://cls.tools/reset-password',
-      });
-      console.log('Check you inbox for instructions');
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
+  resetPassword();
 }
 
 if (command === 'list') {
-  try {
-    (async () => {
-      const token = loadToken();
-
-      if (!token) {
-        console.log('Token not found, run `cls init` first');
-        return;
-      }
-
-      const getStoragesResult = await fetch(
-        `${BASE_URL}/getStorages?token=${token}`
-      );
-      const storages = (await getStoragesResult.json()).storages;
-
-      if (storages.length === 0) {
-        console.log('No storages found');
-        return;
-      }
-
-      console.log('Found the following storages:');
-      console.log(
-        storages
-          .map((storage: string) => {
-            return '  - ' + storage;
-          })
-          .join('\n')
-      );
-
-      process.exit(0);
-    })();
-  } catch (err) {
-    console.log({ err });
-    console.log(err);
-  }
+  list();
 }
 
 if (command === 'create') {
-  inquirer
-    .prompt([
-      {
-        type: 'input',
-        name: 'name',
-        message:
-          'Choose a name for your storage (leave empty to name automatically):',
-      },
-    ])
-    .then(async (answers) => {
-      const token = loadToken();
-
-      if (!token) {
-        console.log('Token not found, run `cls init` first');
-        return;
-      }
-
-      const createStorageResult = await fetch(`${BASE_URL}/createStorage`, {
-        method: 'post',
-        body: JSON.stringify({ token, name: answers.name }),
-      });
-
-      const storageName = (await createStorageResult.json()).name;
-
-      console.log(`Created new storage: ${storageName}`);
-
-      process.exit(0);
-    })
-    .catch((err) => {
-      if (err.message) {
-        console.log(err.message);
-      }
-    });
+  create();
 }
