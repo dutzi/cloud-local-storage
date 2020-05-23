@@ -1,5 +1,6 @@
 import inquirer from 'inquirer';
 import firebase from 'firebase/app';
+import * as logger from '../utils/logger';
 
 export default function resetPassword() {
   inquirer
@@ -9,9 +10,11 @@ export default function resetPassword() {
       await firebase.auth().sendPasswordResetEmail(email, {
         url: 'https://cls.tools/password-reset',
       });
-      console.log('Check you inbox for instructions');
+      logger.log(
+        'Password reset email sent, check your inbox for instructions'
+      );
     })
     .catch((err) => {
-      console.log(err.message);
+      logger.error(err.message);
     });
 }

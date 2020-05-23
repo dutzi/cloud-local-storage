@@ -6,6 +6,8 @@ import signIn from '../auth/sign-in';
 import signup from '../auth/signup';
 import firebase from 'firebase/app';
 import { saveToken } from '../utils/save-token';
+import colorize from '../utils/colorize';
+import * as logger from '../utils/logger';
 
 export default function init() {
   (async () => {
@@ -26,7 +28,7 @@ export default function init() {
       ]);
 
       if (getAnotherToken === 'use-existing') {
-        console.log('Cloud Local Storage initialized');
+        logger.log(colorize('Initialized', 'muted', true));
         return;
       }
     }
@@ -55,18 +57,23 @@ export default function init() {
         const user = firebase.auth().currentUser;
 
         if (!user) {
-          throw { message: 'User not found' };
+          return;
         }
 
         const token = uuid();
         await firebase.functions().httpsCallable('setToken')({ token });
         saveToken(token);
-        console.log('Cloud Local Storage initialized');
-        console.log(`Saved token to ~/${CLS_RC_FILE_NAME}`);
+        logger.log(colorize('Initialized', 'muted', true));
+        logger.log(
+          [
+            colorize('Saved token to ', 'muted', true),
+            colorize(`~/${CLS_RC_FILE_NAME}`, 'highlighted', true),
+          ].join('')
+        );
         process.exit(0);
       })
       .catch((err) => {
-        console.log(err.message);
+        logger.error(err.message);
       });
   })();
 }

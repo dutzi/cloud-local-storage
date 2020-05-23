@@ -14,14 +14,14 @@ export default functions.https.onRequest((req, res) => {
 
     const _key = key || uuid();
 
-    if (typeof data !== 'object' || Array.isArray(data)) {
-      res.send({
-        error: true,
-        errorCode: 'data-not-object',
-      });
+    // if (typeof data !== 'object' || Array.isArray(data)) {
+    //   res.send({
+    //     error: true,
+    //     errorCode: 'data-not-object',
+    //   });
 
-      return;
-    }
+    //   return;
+    // }
 
     if (token) {
       if (typeof token !== 'string') {
@@ -44,9 +44,9 @@ export default functions.https.onRequest((req, res) => {
         return;
       }
 
-      await firestore.doc(`/users/${user.id}/data/${_key}`).set(data);
+      await firestore.doc(`/users/${user.id}/data/${_key}`).set({ data });
     } else {
-      await firestore.doc(`/data/${_key}`).set(data);
+      await firestore.doc(`/data/${_key}`).set({ data });
     }
 
     res.send({ key: _key });

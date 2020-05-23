@@ -25,6 +25,7 @@ Site & API
 [x] Link to cli tool in last section in home page
 [x] Remove semicolons from code examples
 [x] Better favicon
+[ ] Find a solution for NODE_ENV
 
 CLI Tool
 

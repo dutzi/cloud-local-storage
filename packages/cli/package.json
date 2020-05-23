@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^4.0.0",
     "cloud-local-storage": "^0.0.7",
     "firebase": "^7.14.5",
     "fs-extra": "^9.0.0",

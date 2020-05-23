@@ -1,5 +1,7 @@
 import inquirer from 'inquirer';
 import firebase from 'firebase/app';
+import * as logger from '../utils/logger';
+import colorize from '../utils/colorize';
 
 export default function signIn() {
   return inquirer
@@ -9,17 +11,27 @@ export default function signIn() {
     ])
     .then(async (answers) => {
       const { email, password } = answers;
+
       const res = await firebase
         .auth()
         .signInWithEmailAndPassword(email, password);
 
       if (!res.user) {
-        throw { message: 'User not found' };
+        return { error: true };
       }
 
-      return { email, password };
+      return {};
     })
     .catch((err) => {
-      console.log(err.message);
+      logger.error(err.message);
+      if (err.code === 'auth/wrong-password') {
+        logger.info(
+          [
+            colorize('Forgot your password? Run ', 'muted', true),
+            colorize('cls reset-password ', 'highlighted', true),
+            colorize('to get a reset password email', 'muted', true),
+          ].join('')
+        );
+      }
     });
 }

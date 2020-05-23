@@ -1,6 +1,8 @@
 import inquirer from 'inquirer';
 import loadToken from '../utils/load-token';
 import * as cls from 'cloud-local-storage';
+import * as logger from '../utils/logger';
+import colorize from '../utils/colorize';
 
 export default function setItem() {
   inquirer
@@ -14,7 +16,7 @@ export default function setItem() {
       {
         type: 'input',
         name: 'data',
-        message: 'Type the JSON object you would like to save:',
+        message: 'Type the data you would like to save:',
       },
     ])
     .then(async (answers) => {
@@ -25,18 +27,26 @@ export default function setItem() {
         return;
       }
 
-      const res = await cls.setItem(
-        answers.key,
-        JSON.parse(answers.data),
-        token
-      );
+      let data: any;
+      try {
+        data = JSON.parse(answers.data);
+      } catch (err) {
+        data = answers.data;
+      }
 
-      console.log(`Saved with the following key: ${res.key}`);
+      const key = await cls.setItem(answers.key, data, token);
+
+      logger.log(
+        [
+          colorize(`Saved with the following key: `, 'muted', true),
+          colorize(key, 'highlighted', true),
+        ].join('')
+      );
       process.exit(0);
     })
     .catch((err) => {
       if (err.message) {
-        console.log(err.message);
+        logger.error(err.message);
       }
     });
 }

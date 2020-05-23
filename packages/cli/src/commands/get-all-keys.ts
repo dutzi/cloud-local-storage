@@ -1,5 +1,7 @@
 import loadToken from '../utils/load-token';
 import * as cls from 'cloud-local-storage';
+import * as logger from '../utils/logger';
+import colorize from '../utils/colorize';
 
 export default function getAllKeys() {
   try {
@@ -7,30 +9,25 @@ export default function getAllKeys() {
       const token = loadToken();
 
       if (!token) {
-        console.log('Token not found, run `cls init` first');
+        logger.error('Token not found, run `cls init` first');
         return;
       }
 
       const keys = await cls.getAllKeys(token);
 
       if (keys.length === 0) {
-        console.log('No storages found');
+        logger.log('No storages found');
         return;
       }
 
-      console.log('Found the following storages:');
-      console.log(
-        keys
-          .map((key: string) => {
-            return '  - ' + key;
-          })
-          .join('\n')
-      );
+      logger.log(colorize('Found the following keys:', 'muted', true));
+      keys.forEach((key: string) => {
+        console.log('  ' + key);
+      });
 
       process.exit(0);
     })();
   } catch (err) {
-    console.log({ err });
-    console.log(err);
+    logger.error(err);
   }
 }

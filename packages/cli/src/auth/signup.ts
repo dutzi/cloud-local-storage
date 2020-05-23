@@ -1,5 +1,7 @@
 import inquirer from 'inquirer';
 import firebase from 'firebase/app';
+import * as logger from '../utils/logger';
+import colorize from '../utils/colorize';
 
 export default function signup() {
   return inquirer
@@ -16,8 +18,8 @@ export default function signup() {
       const { email, password, passwordVerification } = answers;
 
       if (password !== passwordVerification) {
-        console.log('Passwords mismatch');
-        throw new Error();
+        logger.error("Passwords don't match");
+        return {};
       }
 
       const res = await firebase
@@ -25,13 +27,15 @@ export default function signup() {
         .createUserWithEmailAndPassword(email, password);
 
       if (!res.user) {
-        console.log('Error: Could not create user');
+        logger.error('Could not create user');
         throw new Error();
       }
 
-      console.log(`Created an account for ${email}`);
+      logger.success(
+        [colorize(`Created an account for `, 'muted', true), email].join('')
+      );
 
-      return { email, password };
+      return {};
     })
-    .catch((err) => console.log(err.message));
+    .catch((err) => logger.error(err.message));
 }
