@@ -1,8 +1,5 @@
-import * as admin from 'firebase-admin';
 import * as functions from 'firebase-functions';
 import getUserByToken from '../utils/get-user-by-token';
-
-const firestore = admin.firestore();
 
 export default functions.https.onRequest(async (req, res) => {
   const { token } = req.query;

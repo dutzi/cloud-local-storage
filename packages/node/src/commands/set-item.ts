@@ -17,5 +17,7 @@ export default function setItem(
       data,
       token,
     }),
-  }).then((res) => res.json());
+  })
+    .then((res) => res.json())
+    .then((res) => res.key);
 }
