@@ -1,38 +1,45 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './index.module.scss';
 import { Link } from 'react-router-dom';
+import highlightCode from '../../utils/highlight-code';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
-function highlightCode(code: string) {
-  return code
-    .trim()
-    .replace(/'(.*?)'/g, `<span class="${styles.string}">'$1'</span>`)
-    .replace(/\/\/(.*)/g, `<span class="${styles.comment}">//$1</span>`);
-}
-
-const codeWelcome = highlightCode(`
+const codeWelcome = highlightCode(
+  `
 import cls from 'cloud-local-storage';
 
 await cls.setItem('foo', {bar: 1})
 await cls.getItem('foo'); // {bar: 1}
-`);
+`,
+  styles
+);
 
-const codeUUID = highlightCode(`
+const codeUUID = highlightCode(
+  `
 await cls.setItem({bar: 1}) // c6cd9316…
 await cls.getItem('c6cd9316…') // {bar: 1}
-`);
+`,
+  styles
+);
 
-const codeToken = highlightCode(`
+const codeToken = highlightCode(
+  `
 const myStorage = cls('afde3b08…');
 myStorage.setItem('userData', {a: 1});
 myStorage.getItem('userData') // {a: 1}
-`);
+`,
+  styles
+);
 
-export default function Home() {
+export default function Docs() {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <div className={styles.wrapper}>
-      <header className={styles.header}>
-        <img src="/logo.svg" alt="logo" />
-      </header>
+      <Header />
 
       <main className={styles.sections}>
         <div className={styles.section}>
@@ -134,16 +141,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className={styles.footer}>
-        a side project by{' '}
-        <a
-          href="https://dutzi.party/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          dutzi
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }

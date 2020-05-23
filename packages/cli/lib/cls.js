@@ -14,7 +14,6 @@ var reset_password_1 = __importDefault(require("./commands/reset-password"));
 var init_1 = __importDefault(require("./commands/init"));
 var get_item_1 = __importDefault(require("./commands/get-item"));
 var set_item_1 = __importDefault(require("./commands/set-item"));
-var isDeveloping = process.env.NODE_ENV === 'development';
 var firebaseConfig = {
     apiKey: 'AIzaSyCig23UBEJNf6o1gItzQWm3tPxqP868vGI',
     authDomain: 'cloud-local-storage.firebaseapp.com',
@@ -26,7 +25,7 @@ var firebaseConfig = {
     measurementId: 'G-7XSQF4DH9D',
 };
 app_1.default.initializeApp(firebaseConfig);
-if (isDeveloping) {
+if (process.env.NODE_ENV === 'development') {
     app_1.default.firestore().settings({
         host: 'localhost:8100',
         ssl: false,

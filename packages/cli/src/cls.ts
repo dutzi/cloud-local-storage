@@ -11,8 +11,6 @@ import init from './commands/init';
 import getItem from './commands/get-item';
 import setItem from './commands/set-item';
 
-const isDeveloping = process.env.NODE_ENV === 'development';
-
 const firebaseConfig = {
   apiKey: 'AIzaSyCig23UBEJNf6o1gItzQWm3tPxqP868vGI',
   authDomain: 'cloud-local-storage.firebaseapp.com',
@@ -26,7 +24,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-if (isDeveloping) {
+if (process.env.NODE_ENV === 'development') {
   firebase.firestore().settings({
     host: 'localhost:8100',
     ssl: false,

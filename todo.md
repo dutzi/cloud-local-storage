@@ -8,3 +8,7 @@
 [ ] remove firebase.firestore() from cli/init
 [ ] reset password page
 [ ] docs page
+[ ] github readme
+[ ] rename getStorages -> get-all-keys
+[ ] rename createStorage -> create-item
+[ ] remove createStorage (create-item)?

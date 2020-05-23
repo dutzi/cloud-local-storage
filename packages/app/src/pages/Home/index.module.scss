@@ -1,24 +1,10 @@
 @import '../../partials.module';
 
 .wrapper {
-  width: calc(100vw - 2em);
-  max-width: 980px;
-  margin: 0px auto;
+  @include wrapper;
 
   .header {
-    margin: 4em 0px 2em;
-    padding: 1em 0px;
-    text-align: center;
-    position: sticky;
-    top: 0px;
-    background: #ffffff;
-
-    img {
-      width: 500px;
-      max-width: calc(100vw - 2em);
-      border-bottom: 4px solid #ff7e03;
-      padding-bottom: 0.5em;
-    }
+    @include header;
   }
 
   .sections {
@@ -90,8 +76,6 @@
   }
 
   .footer {
-    color: #666;
-    text-align: center;
-    margin-bottom: 1em;
+    @include footer;
   }
 }
