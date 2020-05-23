@@ -1,4 +1,4 @@
-![Cloud Local Storage](./packages/app/public/github-banner.png)
+# Cloud Local Storage
 
 Serverless storage exposed via simple, familiar API.
 
