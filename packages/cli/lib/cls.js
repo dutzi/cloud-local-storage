@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var yargs_1 = __importDefault(require("yargs"));
 var app_1 = __importDefault(require("firebase/app"));
 require("firebase/auth");
-require("firebase/firestore");
+require("firebase/functions");
 var list_1 = __importDefault(require("./commands/list"));
 var create_1 = __importDefault(require("./commands/create"));
 var reset_password_1 = __importDefault(require("./commands/reset-password"));
@@ -26,10 +26,11 @@ var firebaseConfig = {
 };
 app_1.default.initializeApp(firebaseConfig);
 if (process.env.NODE_ENV === 'development') {
-    app_1.default.firestore().settings({
-        host: 'localhost:8100',
-        ssl: false,
-    });
+    app_1.default.functions().useFunctionsEmulator('http://localhost:5011');
+    // firebase.firestore().settings({
+    //   host: 'localhost:8100',
+    //   ssl: false,
+    // });
 }
 var argv = yargs_1.default
     .usage('Usage: $0 <command> [options]')

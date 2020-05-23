@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Docs from './pages/Docs';
+import PasswordReset from './pages/PasswordReset';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       </Route>
       <Route path="/docs">
         <Docs />
+      </Route>
+      <Route path="/password-reset">
+        <PasswordReset />
       </Route>
     </Router>
   );

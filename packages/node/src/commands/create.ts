@@ -21,10 +21,10 @@ export default async function create(keyOrToken?: string, token?: string) {
     _token = token;
   }
 
-  const createStorageResult = await fetch(`${BASE_URL}/createStorage`, {
+  const createItemResult = await fetch(`${BASE_URL}/createItem`, {
     method: 'post',
     body: JSON.stringify({ token: _token, name: _key }),
   });
 
-  return (await createStorageResult.json()).key;
+  return (await createItemResult.json()).key;
 }

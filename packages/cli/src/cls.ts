@@ -3,7 +3,7 @@
 import yargs from 'yargs';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import 'firebase/firestore';
+import 'firebase/functions';
 import list from './commands/list';
 import create from './commands/create';
 import resetPassword from './commands/reset-password';
@@ -25,10 +25,12 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 if (process.env.NODE_ENV === 'development') {
-  firebase.firestore().settings({
-    host: 'localhost:8100',
-    ssl: false,
-  });
+  firebase.functions().useFunctionsEmulator('http://localhost:5011');
+
+  // firebase.firestore().settings({
+  //   host: 'localhost:8100',
+  //   ssl: false,
+  // });
 }
 
 const argv = yargs

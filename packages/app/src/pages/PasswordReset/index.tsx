@@ -5,7 +5,7 @@ import useScrollToTop from '../../hooks/use-scroll-to-top';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-export default function Docs() {
+export default function PasswordReset() {
   useScrollToTop();
 
   return (

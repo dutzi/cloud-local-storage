@@ -1,16 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './index.module.scss';
 import { Link } from 'react-router-dom';
+import useScrollToTop from '../../hooks/use-scroll-to-top';
 import highlightCode from '../../utils/highlight-code';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 const codeWelcome = highlightCode(
   `
-import cls from 'cloud-local-storage';
+import cls from 'cloud-local-storage'
 
 await cls.setItem('foo', {bar: 1})
-await cls.getItem('foo'); // {bar: 1}
+await cls.getItem('foo') // {bar: 1}
 `,
   styles
 );
@@ -25,16 +26,32 @@ await cls.getItem('c6cd9316…') // {bar: 1}
 
 const codeToken = highlightCode(
   `
-const myStorage = cls('afde3b08…');
-myStorage.setItem('userData', {a: 1});
+const myStorage = cls('afde3b08…')
+myStorage.setItem('userData', {a: 1})
 myStorage.getItem('userData') // {a: 1}
 `,
   styles
 );
 
 export default function Docs() {
+  const arrowDownRef = useRef<HTMLImageElement>(null);
+
+  useScrollToTop();
+
   useEffect(() => {
-    window.scrollTo({ top: 0 });
+    function handleScroll() {
+      if (!arrowDownRef.current) {
+        return;
+      }
+
+      arrowDownRef.current.style.opacity = window.scrollY > 20 ? '0' : '1';
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
@@ -53,6 +70,13 @@ export default function Docs() {
             <code dangerouslySetInnerHTML={{ __html: codeWelcome }}></code>
           </pre>
         </div>
+
+        <img
+          ref={arrowDownRef}
+          className={styles.arrow}
+          alt="arrow down"
+          src="/chevron-down.svg"
+        />
 
         <div className={styles.section}>
           <h2>What if someone overwrites my data?</h2>
@@ -82,9 +106,9 @@ export default function Docs() {
           <h2>That’s not enough, I want to namespace my storage!</h2>
           <p>
             No problem! Call cls passing it your token (generated through
-            cloud-local-storage’s CLI tool), that will return a namespaced
-            version of cls, calling setItem and getItem on it will save/load
-            data from
+            cloud-local-storage’s <Link to="/cli">CLI tool</Link>), that will
+            return a namespaced version of cls, calling setItem and getItem on
+            it will save/load data from
             <i>your</i> storage.
           </p>
 
@@ -100,13 +124,26 @@ export default function Docs() {
             SDK for Node and Web.{' '}
           </p>
           <p>
-            If you prefer you can use its API directly, doc are{' '}
+            If you prefer you can use its API directly, docs are{' '}
             <Link to="/docs">here</Link>.
           </p>
           <p>
-            It also offers a tiny CLI tool that helps manage your stored items.
+            It also offers a simple <Link to="/cli">CLI tool</Link> that helps
+            manage your stored items.
           </p>
           <p>It’s open-source and free, and will always be.</p>
+          <p>
+            Icons by{' '}
+            <a
+              href="https://fontawesome.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.muted}
+            >
+              Font Awesome
+            </a>
+            .
+          </p>
 
           <div className={styles.logos}>
             <a

@@ -23,12 +23,12 @@
         "function": "setItem"
       },
       {
-        "source": "/getStorages",
-        "function": "getStorages"
+        "source": "/getAllKeys",
+        "function": "getAllKeys"
       },
       {
-        "source": "/createStorage",
-        "function": "createStorage"
+        "source": "/createItem",
+        "function": "createItem"
       },
       {
         "source": "**",

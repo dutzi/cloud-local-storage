@@ -59,7 +59,7 @@ export default function init() {
         }
 
         const token = uuid();
-        await firebase.firestore().doc(`users/${user.uid}`).set({ token });
+        await firebase.functions().httpsCallable('setToken')({ token });
         saveToken(token);
         console.log('Cloud Local Storage initialized');
         console.log(`Saved token to ~/${CLS_RC_FILE_NAME}`);

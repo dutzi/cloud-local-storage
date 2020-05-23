@@ -7,7 +7,7 @@ export default function resetPassword() {
     .then(async (answers) => {
       const { email } = answers;
       await firebase.auth().sendPasswordResetEmail(email, {
-        url: 'https://cls.tools/reset-password',
+        url: 'https://cls.tools/password-reset',
       });
       console.log('Check you inbox for instructions');
     })

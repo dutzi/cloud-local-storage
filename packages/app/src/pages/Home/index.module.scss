@@ -1,5 +1,20 @@
 @import '../../partials.module';
 
+@keyframes arrow {
+  0% {
+    transform: translateY(-20px);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .wrapper {
   @include wrapper;
 
@@ -14,8 +29,16 @@
       margin-bottom: 10em;
       min-height: 100vh;
 
+      &:first-child {
+        min-height: calc(100vh - 4em - 2em - 2em - 10em - 110px);
+      }
+
       &:last-child {
         min-height: 50vh;
+
+        @include mobile {
+          margin-bottom: 1em;
+        }
       }
 
       h2 {
@@ -72,6 +95,19 @@
           }
         }
       }
+    }
+
+    .arrow {
+      animation: arrow 1s ease-out;
+      animation-delay: 2s;
+      animation-fill-mode: both;
+      transform: translateY(-20px);
+      width: 30px;
+      color: #777;
+      display: block;
+      margin: auto;
+      transition: opacity 0.25s ease-out;
+      pointer-events: none;
     }
   }
 

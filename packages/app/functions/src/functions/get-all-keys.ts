@@ -33,7 +33,7 @@ export default functions.https.onRequest(async (req, res) => {
     return;
   }
 
-  const storages = await user.ref.collection('storages').get();
+  const storages = await user.ref.collection('data').get();
 
   res.send({ storages: storages.docs.map((storage) => storage.id) });
 });
