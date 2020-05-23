@@ -16,6 +16,8 @@
     img {
       width: 500px;
       max-width: calc(100vw - 2em);
+      border-bottom: 4px solid #ff7e03;
+      padding-bottom: 0.5em;
     }
   }
 
@@ -60,6 +62,7 @@
         font-size: 0.85em;
         text-decoration: none;
         color: inherit;
+        display: block;
       }
 
       .logos {

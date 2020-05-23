@@ -6,3 +6,5 @@
 [x] handle token-less items in functions/set-item
 [x] handle token-less items in functions/get-item
 [ ] remove firebase.firestore() from cli/init
+[ ] reset password page
+[ ] docs page
