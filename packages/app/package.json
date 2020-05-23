@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start:emulators": "firebase emulators:start",
-    "deploy": "firebase deploy",
+    "deploy": "npm version patch --force && yarn build && firebase deploy",
     "deploy:functions": "firebase deploy --only functions",
     "prestart": "ensure-localhost",
     "start": "react-scripts start",
