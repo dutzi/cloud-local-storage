@@ -25,7 +25,7 @@ var firebaseConfig = {
     measurementId: 'G-7XSQF4DH9D',
 };
 app_1.default.initializeApp(firebaseConfig);
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development' && false) {
     app_1.default.functions().useFunctionsEmulator('http://localhost:5011');
     // firebase.firestore().settings({
     //   host: 'localhost:8100',

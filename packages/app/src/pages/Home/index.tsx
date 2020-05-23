@@ -148,6 +148,15 @@ export default function Docs() {
             >
               Font Awesome
             </a>
+            , logos from{' '}
+            <a
+              href="https://svgporn.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.muted}
+            >
+              SVG Porn
+            </a>
             .
           </p>
 
