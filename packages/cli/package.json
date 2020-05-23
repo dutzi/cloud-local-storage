@@ -1,6 +1,6 @@
 {
   "name": "cloud-local-storage-cli",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "bin": {
     "cls": "lib/cls.js"
