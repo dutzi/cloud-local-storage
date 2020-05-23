@@ -9,6 +9,11 @@
     "start": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dutzi/cloud-local-storage.git",
+    "directory": "packages/cli"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
