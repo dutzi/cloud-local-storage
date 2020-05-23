@@ -8,7 +8,7 @@ var yargs_1 = __importDefault(require("yargs"));
 var app_1 = __importDefault(require("firebase/app"));
 require("firebase/auth");
 require("firebase/functions");
-var list_1 = __importDefault(require("./commands/list"));
+var get_all_keys_1 = __importDefault(require("./commands/get-all-keys"));
 var create_1 = __importDefault(require("./commands/create"));
 var reset_password_1 = __importDefault(require("./commands/reset-password"));
 var init_1 = __importDefault(require("./commands/init"));
@@ -35,22 +35,22 @@ if (process.env.NODE_ENV === 'development') {
 var argv = yargs_1.default
     .usage('Usage: $0 <command> [options]')
     .command('init', 'Initialize Cloud Local Storage')
-    .command('list', 'List all storages')
-    .command('create', 'Create new storage item')
     .command('get', 'Get storage item')
     .command('set', 'Set storage item')
-    .command('resetpass', 'Send reset password link')
+    .command('get-all-keys', 'List all storages')
+    .command('create', 'Create new storage item')
+    .command('reset-password', 'Send reset password link')
     .demandCommand(1)
     .help('h').argv;
 var command = argv._[0];
 if (command === 'init') {
     init_1.default();
 }
-if (command === 'resetpass') {
+if (command === 'reset-password') {
     reset_password_1.default();
 }
-if (command === 'list') {
-    list_1.default();
+if (command === 'get-all-keys') {
+    get_all_keys_1.default();
 }
 if (command === 'create') {
     create_1.default();

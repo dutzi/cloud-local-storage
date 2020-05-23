@@ -1,7 +1,7 @@
 import getItem from './commands/get-item';
 import setItem from './commands/set-item';
 import create from './commands/create';
-import list from './commands/list';
+import getAllKeys from './commands/get-all-keys';
 
 function createCloudLocalStorageClient(token: string) {
   return {
@@ -13,10 +13,10 @@ function createCloudLocalStorageClient(token: string) {
 createCloudLocalStorageClient.getItem = getItem;
 createCloudLocalStorageClient.setItem = setItem;
 createCloudLocalStorageClient.create = create;
-createCloudLocalStorageClient.list = list;
+createCloudLocalStorageClient.getAllKeys = getAllKeys;
 
 module.exports = createCloudLocalStorageClient;
 
 export default createCloudLocalStorageClient;
 
-export { getItem, setItem, create, list };
+export { getItem, setItem, create, getAllKeys };

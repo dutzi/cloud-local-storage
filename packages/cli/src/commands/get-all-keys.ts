@@ -1,7 +1,7 @@
 import loadToken from '../utils/load-token';
 import * as cls from 'cloud-local-storage';
 
-export default function list() {
+export default function getAllKeys() {
   try {
     (async () => {
       const token = loadToken();
@@ -11,7 +11,7 @@ export default function list() {
         return;
       }
 
-      const keys = await cls.list(token);
+      const keys = await cls.getAllKeys(token);
 
       if (keys.length === 0) {
         console.log('No storages found');

@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import { BASE_URL } from '../utils/consts';
 
-export default async function list(token: string) {
+export default async function getAllKeys(token: string) {
   const getStoragesResult = await fetch(
     `${BASE_URL}/getStorages?token=${token}`
   );

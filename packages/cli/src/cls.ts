@@ -4,7 +4,7 @@ import yargs from 'yargs';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/functions';
-import list from './commands/list';
+import getAllKeys from './commands/get-all-keys';
 import create from './commands/create';
 import resetPassword from './commands/reset-password';
 import init from './commands/init';
@@ -36,11 +36,11 @@ if (process.env.NODE_ENV === 'development') {
 const argv = yargs
   .usage('Usage: $0 <command> [options]')
   .command('init', 'Initialize Cloud Local Storage')
-  .command('list', 'List all storages')
-  .command('create', 'Create new storage item')
   .command('get', 'Get storage item')
   .command('set', 'Set storage item')
-  .command('resetpass', 'Send reset password link')
+  .command('get-all-keys', 'List all storages')
+  .command('create', 'Create new storage item')
+  .command('reset-password', 'Send reset password link')
   .demandCommand(1)
   .help('h').argv;
 
@@ -50,12 +50,12 @@ if (command === 'init') {
   init();
 }
 
-if (command === 'resetpass') {
+if (command === 'reset-password') {
   resetPassword();
 }
 
-if (command === 'list') {
-  list();
+if (command === 'get-all-keys') {
+  getAllKeys();
 }
 
 if (command === 'create') {
