@@ -7,83 +7,134 @@
     @include header;
   }
 
-  .sections {
-    .section {
-      max-width: 515px;
-      margin: auto;
-      margin-bottom: 3em;
-      border-bottom: 3px dashed #bbb;
-      padding-bottom: 3em;
+  .navbar {
+    position: sticky;
+    top: 100px;
 
-      &:last-child {
-        border-bottom: none;
+    @include mobile {
+      position: static;
+      top: unset;
+    }
+
+    .absolute {
+      position: absolute;
+
+      @include mobile {
+        position: static;
       }
+    }
 
-      .muted {
-        color: #999;
+    ul {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+
+      a {
+        text-decoration: none;
+        border-left: 3px solid #ff7e03;
+        display: block;
+        padding-left: 0.5em;
+        color: #000000;
       }
+    }
+  }
 
-      .methodAndPath {
-        font-weight: 500;
-      }
+  .main {
+    max-width: 515px;
+    margin: auto;
 
-      h3 {
-        font-weight: 600;
-        font-size: 1em;
-      }
+    h1 {
+      scroll-margin-top: 100px;
+    }
 
-      .tableWrapper {
-        border-radius: 6px;
-        border: 1px solid #bbb;
-        overflow: hidden;
+    .sections {
+      .section {
+        margin-bottom: 3em;
+        border-bottom: 3px dashed #bbb;
+        padding-bottom: 3em;
 
-        .table {
-          border-collapse: collapse;
+        &:last-child {
+          border-bottom: none;
+        }
 
-          tr {
-            vertical-align: baseline;
+        .muted {
+          color: #999;
+        }
 
-            &:last-child {
-              td {
-                border-bottom: none;
-              }
-            }
+        .methodAndPath,
+        .examples {
+          font-weight: 500;
+        }
 
-            td {
-              border-right: 1px solid #bbb;
-              border-bottom: 1px solid #bbb;
-              padding: 0.5em;
+        h3 {
+          font-weight: 600;
+          font-size: 1em;
+        }
+
+        .tableWrapper {
+          border-radius: 6px;
+          border: 1px solid #bbb;
+          overflow: hidden;
+
+          .table {
+            border-collapse: collapse;
+
+            tr {
+              vertical-align: baseline;
 
               &:last-child {
-                border-right: none;
+                td {
+                  border-bottom: none;
+                }
+              }
+
+              td {
+                border-right: 1px solid #bbb;
+                border-bottom: 1px solid #bbb;
+                padding: 0.5em;
+
+                &:last-child {
+                  border-right: none;
+                }
               }
             }
           }
         }
+
+        code.bash {
+          background: #eee;
+          padding: 0.25em;
+
+          &:before {
+            content: '$';
+            margin-right: 0.25em;
+            color: #777;
+          }
+        }
+
+        // .code {
+        //   margin: 0px -1em;
+        //   border: 3px solid #000000;
+        //   box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.5);
+        //   border-radius: 7px;
+        //   padding: 1em;
+        //   margin-bottom: 4em;
+
+        //   @include mobile {
+        //     margin: 0px 0px 4em;
+        //     min-width: calc(100vw - 2em);
+        //     overflow: auto;
+        //   }
+
+        //   .comment {
+        //     color: #777;
+        //   }
+
+        //   .string {
+        //     color: #ff7e03;
+        //   }
+        // }
       }
-
-      // .code {
-      //   margin: 0px -1em;
-      //   border: 3px solid #000000;
-      //   box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.5);
-      //   border-radius: 7px;
-      //   padding: 1em;
-      //   margin-bottom: 4em;
-
-      //   @include mobile {
-      //     margin: 0px 0px 4em;
-      //     min-width: calc(100vw - 2em);
-      //     overflow: auto;
-      //   }
-
-      //   .comment {
-      //     color: #777;
-      //   }
-
-      //   .string {
-      //     color: #ff7e03;
-      //   }
-      // }
     }
   }
 

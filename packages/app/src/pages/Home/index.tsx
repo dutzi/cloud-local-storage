@@ -69,6 +69,12 @@ export default function Docs() {
           <pre className={styles.code}>
             <code dangerouslySetInnerHTML={{ __html: codeWelcome }}></code>
           </pre>
+
+          <div className={styles.gutter}>
+            <Link to="/docs" className={styles.linkButton}>
+              Read Docs
+            </Link>
+          </div>
         </div>
 
         <img
@@ -106,9 +112,9 @@ export default function Docs() {
           <h2>That’s not enough, I want to namespace my storage!</h2>
           <p>
             No problem! Call cls passing it your token (generated through
-            cloud-local-storage’s <Link to="/cli">CLI tool</Link>), that will
-            return a namespaced version of cls, calling setItem and getItem on
-            it will save/load data from
+            cloud-local-storage’s <Link to="/docs#cli">CLI tool</Link>), that
+            will return a namespaced version of cls, calling setItem and getItem
+            on it will save/load data from
             <i>your</i> storage.
           </p>
 
@@ -128,8 +134,8 @@ export default function Docs() {
             <Link to="/docs">here</Link>.
           </p>
           <p>
-            It also offers a simple <Link to="/cli">CLI tool</Link> that helps
-            manage your stored items.
+            It also offers a simple <Link to="/docs#cli">CLI tool</Link> that
+            helps manage your stored items.
           </p>
           <p>It’s open-source and free, and will always be.</p>
           <p>

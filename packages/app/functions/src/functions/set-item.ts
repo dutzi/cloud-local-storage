@@ -44,9 +44,13 @@ export default functions.https.onRequest((req, res) => {
         return;
       }
 
-      await firestore.doc(`/users/${user.id}/data/${_key}`).set({ data });
+      await firestore
+        .doc(`/users/${user.id}/data/${_key}`)
+        .set({ data, dateModified: new Date().getTime() });
     } else {
-      await firestore.doc(`/data/${_key}`).set({ data });
+      await firestore
+        .doc(`/data/${_key}`)
+        .set({ data, dateModified: new Date().getTime() });
     }
 
     res.send({ key: _key });

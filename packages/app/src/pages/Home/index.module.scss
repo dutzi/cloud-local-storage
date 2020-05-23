@@ -55,7 +55,7 @@
         margin-bottom: 4em;
 
         @include mobile {
-          margin: 0px 0px 4em;
+          margin: 0px 0px 3em;
           min-width: calc(100vw - 2em);
           overflow: auto;
         }
@@ -66,6 +66,20 @@
 
         .string {
           color: #ff7e03;
+        }
+      }
+
+      .gutter {
+        display: flex;
+        justify-content: center;
+
+        .linkButton {
+          display: inline-block;
+          border-bottom: 3px solid #ff7d03;
+          color: #000;
+          font-weight: 600;
+          padding: 0px;
+          text-decoration: none;
         }
       }
 
