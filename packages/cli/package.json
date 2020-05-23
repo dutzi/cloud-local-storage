@@ -1,8 +1,10 @@
 {
   "name": "cloud-local-storage-cli",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "",
-  "bin": "lib/index.js",
+  "bin": {
+    "cls": "lib/cls.js"
+  },
   "scripts": {
     "start": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"

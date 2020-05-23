@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './index.module.scss';
-import { Link } from 'react-router-dom';
 
 export default function CommandLineTool() {
   return (
@@ -9,6 +8,20 @@ export default function CommandLineTool() {
 
       <div className={styles.sections}>
         <div className={styles.section}>
+          <h2>Install</h2>
+          <p>To install cloud-local-storage's CLI tool, run</p>
+          <div>
+            <code className={styles.bash}>
+              yarn global add cloud-local-storage-cli
+            </code>
+          </div>
+          <p>Or, using npm</p>
+          <div>
+            <code className={styles.bash}>
+              npm install -g cloud-local-storage-cli
+            </code>
+          </div>
+
           <h2>init</h2>
           <h3>Description</h3>
           <p>

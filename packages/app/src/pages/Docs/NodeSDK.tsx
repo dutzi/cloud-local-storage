@@ -9,6 +9,17 @@ export default function NodeSDK() {
 
       <div className={styles.sections}>
         <div className={styles.section}>
+          <h2>Install</h2>
+          <p>To install cloud-local-storage, run</p>
+          <div>
+            <code className={styles.bash}>yarn add cloud-local-storage</code>
+          </div>
+          <p>Or, using npm</p>
+          <div>
+            <code className={styles.bash}>
+              npm install --save cloud-local-storage
+            </code>
+          </div>
           <h2>getItem</h2>
           <h3>Examples</h3>
           <code className={styles.examples}>

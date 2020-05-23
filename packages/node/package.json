@@ -1,6 +1,6 @@
 {
   "name": "cloud-local-storage",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "lib/index.js",
   "scripts": {
     "start": "tsc --watch",
