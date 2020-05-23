@@ -9,10 +9,10 @@ Site & API
 [x] handle token-less items in functions/get-item
 [x] docs page
 [x] remove firebase.firestore() from cli/init
-[ ] reset password page
+[x] reset password page
 [ ] cli docs
 [ ] github readme
-[ ] rename getStorages -> get-all-keys
+[x] rename getStorages -> get-all-keys
 [x] rename createStorage -> create-item
 [x] Doc are here -> docs are here
 [x] Arrow to the bottom indication that the page is scrollable
@@ -24,6 +24,7 @@ Site & API
 [x] On mobile last section should have less bottom margin
 [x] Link to cli tool in last section in home page
 [x] Remove semicolons from code examples
+[x] Better favicon
 
 CLI Tool
 
