@@ -2,23 +2,30 @@ import React from 'react';
 import styles from './index.module.scss';
 import { Link } from 'react-router-dom';
 
-const codeWelcome = `
+function highlightCode(code: string) {
+  return code
+    .trim()
+    .replace(/'(.*?)'/g, `<span class="${styles.string}">'$1'</span>`)
+    .replace(/\/\/(.*)/g, `<span class="${styles.comment}">//$1</span>`);
+}
+
+const codeWelcome = highlightCode(`
 import cls from 'cloud-local-storage';
 
 await cls.setItem('foo', {bar: 1})
-await cls.getItem('foo'); <span class="${styles.comment}">// {bar: 1}</span>
-`.trim();
+await cls.getItem('foo'); // {bar: 1}
+`);
 
-const codeUUID = `
-await cls.setItem({bar: 1}) <span class="${styles.comment}">// c6cd9316…</span>
-await cls.getItem('c6cd9316…') <span class="${styles.comment}">// {bar: 1}</span>
-`.trim();
+const codeUUID = highlightCode(`
+await cls.setItem({bar: 1}) // c6cd9316…
+await cls.getItem('c6cd9316…') // {bar: 1}
+`);
 
-const codeToken = `
+const codeToken = highlightCode(`
 const myStorage = cls('afde3b08…');
 myStorage.setItem('userData', {a: 1});
-myStorage.getItem('userData') <span class="${styles.comment}">// {a: 1}</span>
-`.trim();
+myStorage.getItem('userData') // {a: 1}
+`);
 
 export default function Home() {
   return (
