@@ -1,0 +1,178 @@
+[debug] [2020-05-23T19:19:07.590Z] ----------------------------------------------------------------------
+[debug] [2020-05-23T19:19:07.593Z] Command:       /Users/eldad/.nvm/versions/node/v10.15.1/bin/node /Users/eldad/.nvm/versions/node/v10.15.1/bin/firebase deploy
+[debug] [2020-05-23T19:19:07.594Z] CLI Version:   8.4.0
+[debug] [2020-05-23T19:19:07.594Z] Platform:      darwin
+[debug] [2020-05-23T19:19:07.594Z] Node Version:  v10.15.1
+[debug] [2020-05-23T19:19:07.595Z] Time:          Sat May 23 2020 22:19:07 GMT+0300 (Israel Daylight Time)
+[debug] [2020-05-23T19:19:07.595Z] ----------------------------------------------------------------------
+[debug] [2020-05-23T19:19:07.595Z] 
+[debug] [2020-05-23T19:19:07.610Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-23T19:19:07.611Z] > authorizing via signed-in user
+[debug] [2020-05-23T19:19:07.611Z] [iam] checking project cloud-local-storage for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2020-05-23T19:19:07.614Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-05-23T19:19:07.614Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-05-23T19:19:07.934Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:09 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:07.965Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cloud-local-storage:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2020-05-23T19:19:08.939Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=636","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:08.941Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/cloud-local-storage/serviceAccounts/cloud-local-storage@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-05-23T19:19:10.080Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:11 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:10.081Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cloud-local-storage  
+ 
+[debug] [2020-05-23T19:19:10.538Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:11 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'cloud-local-storage'...
+[info] 
+[info] i  deploying storage, firestore, functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2020-05-23T19:19:23.267Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/cloud-local-storage  
+ 
+[debug] [2020-05-23T19:19:24.606Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2020-05-23T19:19:24.608Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/cloud-local-storage:test  
+ {"source":{"files":[{"name":"storage.rules","content":"service firebase.storage {\n  match /b/{bucket}/o {\n    match /{allPaths=**} {\n      allow read, write: if request.auth!=null;\n    }\n  }\n}\n"}]}}
+[debug] [2020-05-23T19:19:25.735Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  [W] undefined:undefined - Ruleset uses old version (version [1]). Please update to the latest version (version [2]). 
+[info] ✔  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2020-05-23T19:19:25.744Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/cloud-local-storage:test  
+ {"source":{"files":[{"name":"firestore.rules","content":"rules_version = '2';\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    match /{document=**} {\n      allow read, write: if false;\n    }\n  }\n}\n"}]}}
+[debug] [2020-05-23T19:19:26.618Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2020-05-23T19:19:26.620Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "tsc --watch",
+    "start:shell": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "firebase-admin": "^8.10.0",
+    "firebase-functions": "^3.6.1",
+    "uuidv4": "^6.0.9"
+  },
+  "devDependencies": {
+    "@types/uuidv4": "^5.0.0",
+    "firebase-functions-test": "^0.2.0",
+    "tslint": "^5.12.0",
+    "typescript": "^3.8.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2020-05-23T19:19:27.725Z] [functions] runtime dependency check dates: warning: 2020-05-21T00:00:00.000Z error: 2020-06-23T00:00:00.000Z
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2020-05-23T19:19:27.726Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/cloud-local-storage/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-05-23T19:19:27.727Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/cloud-local-storage/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-05-23T19:19:27.728Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/cloud-local-storage/services/cloudbuild.googleapis.com  
+ 
+[debug] [2020-05-23T19:19:28.882Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:28.918Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2020-05-23T19:19:28.969Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2020-05-23T19:19:28.970Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cloud-local-storage/adminSdkConfig  
+ 
+[debug] [2020-05-23T19:19:29.271Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:29.273Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/cloud-local-storage/versions  
+ {"config":{"rewrites":[{"glob":"/getItem","function":"getItem"},{"glob":"/setItem","function":"setItem"},{"glob":"/getAllKeys","function":"getAllKeys"},{"glob":"/createItem","function":"createItem"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-05-23T19:19:31.335Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:31.338Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/cloud-local-storage/releases?pageSize=10&pageToken=  
+ 
+[debug] [2020-05-23T19:19:32.233Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:32.235Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/cloud-local-storage/rulesets/c2eb855e-ce12-4df8-92e8-7cdc7fd2347f  
+ 
+[debug] [2020-05-23T19:19:33.310Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:34 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  storage: latest version of storage.rules already up to date, skipping upload... 
+[debug] [2020-05-23T19:19:33.313Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/cloud-local-storage/releases?pageSize=10&pageToken=  
+ 
+[debug] [2020-05-23T19:19:33.314Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/cloud-local-storage/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2020-05-23T19:19:34.036Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:34.037Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/cloud-local-storage/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2020-05-23T19:19:34.201Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:34.202Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/cloud-local-storage/rulesets/cf06e2e9-a404-444c-835c-f2a73f20c0b0  
+ 
+[debug] [2020-05-23T19:19:34.491Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully 
+[debug] [2020-05-23T19:19:35.086Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:36 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[info] i  functions: preparing functions directory for uploading... 
+[debug] [2020-05-23T19:19:35.088Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/cloud-local-storage/configs  
+ 
+[debug] [2020-05-23T19:19:35.566Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:36 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: packaged functions (53.28 KB) for uploading 
+[debug] [2020-05-23T19:19:36.075Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/cloud-local-storage/locations/-/functions  
+ 
+[debug] [2020-05-23T19:19:36.948Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:36.951Z] [functions] found 3 new HTTP functions, testing setIamPolicy permission...
+[debug] [2020-05-23T19:19:36.951Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cloud-local-storage:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2020-05-23T19:19:37.723Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=621","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:37.723Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2020-05-23T19:19:37.723Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/cloud-local-storage/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2020-05-23T19:19:38.743Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:38.743Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-00d58c93-dbd5-42f8-b0a8-b5777ce21d9f/91b5d535-a6e9-439b-b63c-9f07cef78f9b.zip?GoogleAccessId=service-1040052701754@gcf-admin-robot.iam.gserviceaccount.com&Expires=1590263379&Signature=kYTsDq8UzUXlY7GjvJtYvQA3nwD5MBExn9Lb3wzcRT7fXYUw1NsGFNV85vuEb5QjkxX15defiiCHkJhJWN1u5k7HrrIO1scipY7xap8XVcy7p8EHW5n33M84j2UPYZgHAOhCptxZWNIBKJ5k7q8j3F7YfgFRlDglmMi8p%2ByE863JHFBNdNZAsPqIXDqFbt39OfIa4TuKaqWG3mv%2FECMEgl2f4cFMjfFgwLPxklcdiZF0XCu2T6hzR44VXr9pF9%2B4%2BfQjkBcUH1nOl0oIRFYhbSme%2BqvpWxEoV5NolwjAnqweTXz0jhy9xWpwy48c0fABFDRkGco0mBUfcy4tas2L7A%3D%3D  
+ <request body omitted>
+[debug] [2020-05-23T19:19:39.592Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"AAANsUm-ed19m2d52fwo9cxHJGb6mzk3JD8zxCbXQOXIr1cGIbXBRyO38ykTTo1JVhmiSA4eLOlKOCsCWrg5WgYOzA","etag":"\"ec0537827c0ca5f8d652547c4abd616a\"","x-goog-generation":"1590261580913611","x-goog-metageneration":"1","x-goog-hash":"crc32c=0m/gOQ==, md5=7AU3gnwMpfjWUlR8Sr1hag==","x-goog-stored-content-length":"54562","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Sat, 23 May 2020 19:19:40 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""}
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  hosting[cloud-local-storage]: beginning deploy... 
+[info] i  hosting[cloud-local-storage]: found 22 files in build 
+[debug] [2020-05-23T19:19:39.615Z] [hosting] hash cache [YnVpbGQ] stored for 22 files
+[debug] [2020-05-23T19:19:39.615Z] [hosting][hash queue][FINAL] {"max":3,"min":0,"avg":0,"active":0,"complete":22,"success":22,"errored":0,"retried":0,"total":22,"elapsed":5}
+[debug] [2020-05-23T19:19:39.615Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/cloud-local-storage/versions/3238a64aabc7ddcf:populateFiles  
+ <request body omitted>
+[debug] [2020-05-23T19:19:41.194Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:41.195Z] [hosting][populate queue][FINAL] {"max":1582,"min":1582,"avg":1582,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1582}
+[debug] [2020-05-23T19:19:41.195Z] [hosting] uploads queued: 0
+[debug] [2020-05-23T19:19:41.195Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1590261581195}
+[info] ✔  hosting[cloud-local-storage]: file upload complete 
+[debug] [2020-05-23T19:19:41.196Z] [hosting] deploy completed after 1604ms
+[debug] [2020-05-23T19:19:41.435Z] [rules] releasing firebase.storage/cloud-local-storage.appspot.com with ruleset projects/cloud-local-storage/rulesets/c2eb855e-ce12-4df8-92e8-7cdc7fd2347f
+[debug] [2020-05-23T19:19:41.436Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/cloud-local-storage/releases/firebase.storage/cloud-local-storage.appspot.com  
+ {"release":{"name":"projects/cloud-local-storage/releases/firebase.storage/cloud-local-storage.appspot.com","rulesetName":"projects/cloud-local-storage/rulesets/c2eb855e-ce12-4df8-92e8-7cdc7fd2347f"}}
+[debug] [2020-05-23T19:19:42.629Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:42.630Z] [rules] updated release projects/cloud-local-storage/releases/firebase.storage/cloud-local-storage.appspot.com
+[info] ✔  storage: released rules storage.rules to firebase.storage 
+[debug] [2020-05-23T19:19:42.630Z] [rules] releasing cloud.firestore with ruleset projects/cloud-local-storage/rulesets/cf06e2e9-a404-444c-835c-f2a73f20c0b0
+[debug] [2020-05-23T19:19:42.631Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/cloud-local-storage/releases/cloud.firestore  
+ {"release":{"name":"projects/cloud-local-storage/releases/cloud.firestore","rulesetName":"projects/cloud-local-storage/rulesets/cf06e2e9-a404-444c-835c-f2a73f20c0b0"}}
+[debug] [2020-05-23T19:19:43.696Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 23 May 2020 19:19:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-23T19:19:43.696Z] [rules] updated release projects/cloud-local-storage/releases/cloud.firestore
+[info] ✔  firestore: released rules firestore.rules to cloud.firestore 
+[info] i  functions: creating Node.js 10 function getAllKeys(us-central1)... 
+[debug] [2020-05-23T19:19:43.699Z] Trigger is:  {"httpsTrigger":{}}
+[info] i  functions: creating Node.js 10 function createItem(us-central1)... 
+[debug] [2020-05-23T19:19:43.700Z] Trigger is:  {"httpsTrigger":{}}
+[info] i  functions: creating Node.js 10 function setToken(us-central1)... 
+[debug] [2020-05-23T19:19:43.700Z] Trigger is:  {"httpsTrigger":{}}
+[info] i  functions: updating Node.js 10 function getItem(us-central1)... 
+[debug] [2020-05-23T19:19:43.701Z] Trigger is:  {"httpsTrigger":{}}
+[info] i  functions: updating Node.js 10 function setItem(us-central1)... 
+[debug] [2020-05-23T19:19:43.702Z] Trigger is:  {"httpsTrigger":{}}
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	createStorage(us-central1)
+	getStorages(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+
