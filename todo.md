@@ -10,8 +10,8 @@ Site & API
 [x] docs page
 [x] remove firebase.firestore() from cli/init
 [x] reset password page
-[ ] cli docs
-[ ] github readme
+[x] cli docs
+[x] github readme
 [x] rename getStorages -> get-all-keys
 [x] rename createStorage -> create-item
 [x] Doc are here -> docs are here
@@ -30,4 +30,4 @@ Site & API
 CLI Tool
 
 [ ] Should display tips (code snippets) after init
-[ ] Use orange color for stuff
+[x] Use orange color for stuff
