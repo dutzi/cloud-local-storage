@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
+import cx from 'classnames';
 import styles from './index.module.scss';
 import useScrollToTop from '../../hooks/use-scroll-to-top';
 import Header from '../../components/Header';
@@ -7,8 +8,15 @@ import NodeSDK from './NodeSDK';
 import CommandLineTool from './CommandLineTool';
 import WebAPI from './WebAPI';
 
+export type TPageId = 'node-sdk' | 'cli' | 'web-api';
+
 export default function Docs() {
+  const [activePage, setActivePage] = useState<TPageId>('node-sdk');
   useScrollToTop();
+
+  const handleView = useCallback((pageId: TPageId) => {
+    setActivePage(pageId);
+  }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -17,13 +25,13 @@ export default function Docs() {
       <nav className={styles.navbar}>
         <div className={styles.absolute}>
           <ul>
-            <li>
+            <li className={cx(activePage === 'node-sdk' && styles.active)}>
               <a href="#nodeSDK">Node SDK</a>
             </li>
-            <li>
+            <li className={cx(activePage === 'cli' && styles.active)}>
               <a href="#cli">Command Line Tool</a>
             </li>
-            <li>
+            <li className={cx(activePage === 'web-api' && styles.active)}>
               <a href="#webAPI">Web API</a>
             </li>
           </ul>
@@ -31,9 +39,9 @@ export default function Docs() {
       </nav>
 
       <main className={styles.main}>
-        <NodeSDK />
-        <CommandLineTool />
-        <WebAPI />
+        <NodeSDK onEnter={handleView} />
+        <CommandLineTool onEnter={handleView} />
+        <WebAPI onEnter={handleView} />
       </main>
       <Footer />
     </div>

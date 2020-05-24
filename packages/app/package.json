@@ -10,6 +10,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "classnames": "^2.2.6",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/react-router-dom": "^5.1.5",
     "ensure-localhost": "^0.0.3"
   }

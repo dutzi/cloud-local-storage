@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './index.module.scss';
-import { Link } from 'react-router-dom';
 import useScrollToTop from '../../hooks/use-scroll-to-top';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';

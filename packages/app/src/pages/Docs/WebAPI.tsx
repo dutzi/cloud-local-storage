@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styles from './index.module.scss';
 import { Link } from 'react-router-dom';
+import useIntersectionObserver from '../../hooks/use-intersection-observer';
+import { TPageId } from './';
 
-export default function WebAPI() {
+export default function WebAPI({
+  onEnter,
+}: {
+  onEnter: (pageId: TPageId, ratio: number) => void;
+}) {
+  const wrapperRef = useIntersectionObserver(
+    useCallback(onEnter.bind(null, 'web-api'), [])
+  );
+
   return (
-    <>
+    <div ref={wrapperRef}>
       <h1 id="webAPI">Web API</h1>
 
       <div className={styles.sections}>
@@ -112,6 +122,6 @@ export default function WebAPI() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

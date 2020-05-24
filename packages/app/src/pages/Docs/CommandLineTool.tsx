@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styles from './index.module.scss';
+import useIntersectionObserver from '../../hooks/use-intersection-observer';
+import { TPageId } from './';
 
-export default function CommandLineTool() {
+export default function CommandLineTool({
+  onEnter,
+}: {
+  onEnter: (pageId: TPageId, ratio: number) => void;
+}) {
+  const wrapperRef = useIntersectionObserver(
+    useCallback(onEnter.bind(null, 'cli'), [])
+  );
+
   return (
-    <>
+    <div ref={wrapperRef}>
       <h1 id="cli">Command Line Tool</h1>
 
       <div className={styles.sections}>
@@ -83,6 +93,6 @@ export default function CommandLineTool() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

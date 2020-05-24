@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styles from './index.module.scss';
 import { Link } from 'react-router-dom';
+import useIntersectionObserver from '../../hooks/use-intersection-observer';
+import { TPageId } from './';
 
-export default function NodeSDK() {
+export default function NodeSDK({
+  onEnter,
+}: {
+  onEnter: (pageId: TPageId, ratio: number) => void;
+}) {
+  const wrapperRef = useIntersectionObserver(
+    useCallback(onEnter.bind(null, 'node-sdk'), [])
+  );
+
   return (
-    <>
+    <div ref={wrapperRef}>
       <h1 id="nodeSDK">Node SDK</h1>
 
       <div className={styles.sections}>
@@ -24,11 +34,11 @@ export default function NodeSDK() {
           <h3>Examples</h3>
           <code className={styles.examples}>
             <div>
-              <span className={styles.muted}>cls.</span>
+              <span className={styles.muted}>await cls.</span>
               getItem('some-key')
             </div>
             <div>
-              <span className={styles.muted}>cls.</span>
+              <span className={styles.muted}>await cls.</span>
               getItem('some-key', 'afde3b08…')
             </div>
           </code>
@@ -55,7 +65,8 @@ export default function NodeSDK() {
           </div>
           <h3>Return Value</h3>
           <p>
-            <span className={styles.muted}>object</span> The item's data
+            <span className={styles.muted}>Promise&lt;any&gt;</span> The item's
+            data
           </p>
         </div>
 
@@ -64,15 +75,15 @@ export default function NodeSDK() {
           <h3>Examples</h3>
           <code className={styles.examples}>
             <div>
-              <span className={styles.muted}>cls.</span>
+              <span className={styles.muted}>await cls.</span>
               setItem('some-key', &#x7b;a: 1&#x7d;)
             </div>
             <div>
-              <span className={styles.muted}>cls.</span>
-              setItem('some-key', &#x7b;a: 1&#x7d;, 'afde3b08…')
+              <span className={styles.muted}>await cls.</span>
+              setItem('some-key', &#x7b;a: 1&#x7d;, 'afde3b…')
             </div>
             <div>
-              <span className={styles.muted}>cls.</span>
+              <span className={styles.muted}>await cls.</span>
               setItem(&#x7b;a: 1&#x7d;)
             </div>
           </code>
@@ -108,7 +119,8 @@ export default function NodeSDK() {
           </div>
           <h3>Return Value</h3>
           <p>
-            <span className={styles.muted}>string</span> The item's key
+            <span className={styles.muted}>Promise&lt;string&gt;</span> The
+            item's key
           </p>
         </div>
 
@@ -117,7 +129,7 @@ export default function NodeSDK() {
           <h3>Examples</h3>
           <code className={styles.examples}>
             <div>
-              <span className={styles.muted}>cls.</span>
+              <span className={styles.muted}>await cls.</span>
               getAllKeys('afde3b08…')
             </div>
           </code>
@@ -139,11 +151,11 @@ export default function NodeSDK() {
           </div>
           <h3>Return Value</h3>
           <p>
-            <span className={styles.muted}>string[]</span> A list of storage
-            keys
+            <span className={styles.muted}>Promise&lt;string[]&gt;</span> A list
+            of storage keys
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
