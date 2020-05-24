@@ -126,7 +126,7 @@ export default function Docs() {
         <div className={styles.section}>
           <h2>Stored On Firebase. Forever Free.</h2>
           <p>
-            Cloud Local Stoage stores your data on firebase servers and has an
+            Cloud Local Storage stores your data on firebase servers and has an
             SDK for Node and Web.{' '}
           </p>
           <p>
