@@ -7,5 +7,6 @@ import setItem from './functions/set-item';
 import getAllKeys from './functions/get-all-keys';
 import createItem from './functions/create-item';
 import setToken from './functions/set-token';
+import getToken from './functions/get-token';
 
-export { getItem, setItem, getAllKeys, createItem, setToken };
+export { getItem, setItem, getAllKeys, createItem, setToken, getToken };

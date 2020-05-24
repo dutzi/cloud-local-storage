@@ -24,7 +24,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-if (process.env.NODE_ENV === 'development' && false) {
+if (process.env.CLOUD_LOCAL_STORAGE_DEV === 'true') {
   firebase.functions().useFunctionsEmulator('http://localhost:5011');
 
   // firebase.firestore().settings({

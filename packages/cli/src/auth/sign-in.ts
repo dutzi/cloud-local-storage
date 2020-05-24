@@ -20,7 +20,9 @@ export default function signIn() {
         return { error: true };
       }
 
-      return {};
+      const tokenRes = await firebase.functions().httpsCallable('getToken')();
+
+      return tokenRes.data;
     })
     .catch((err) => {
       logger.error(err.message);

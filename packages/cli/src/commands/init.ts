@@ -28,7 +28,11 @@ export default function init() {
       ]);
 
       if (getAnotherToken === 'use-existing') {
-        logger.log(colorize('Initialized', 'muted', true));
+        logger.log(colorize('Skipped initialization', 'muted', true));
+        logger.info(
+          colorize('Token is here ', 'muted', true) +
+            colorize(`~/${CLS_RC_FILE_NAME}`, 'highlighted', true)
+        );
         return;
       }
     }
@@ -53,15 +57,47 @@ export default function init() {
           return signup();
         }
       })
-      .then(async () => {
-        const user = firebase.auth().currentUser;
+      .then((res) => {
+        if (res.token) {
+          logger.log(
+            'A token was found for your account, would you like to use it or create a new one?'
+          );
+          logger.info(
+            'If you create a new one the old one will become invalid (all your data will still be available)'
+          );
+          return inquirer
+            .prompt([
+              {
+                type: 'list',
+                name: 'createOrUseExistingToken',
+                message: 'Create a new token?',
+                choices: [
+                  { name: 'Yes, create a new one', value: 'new-one' },
+                  { name: 'No, use existing', value: 'use-existing' },
+                ],
+              },
+            ])
+            .then((answers) => {
+              if (answers.createOrUseExistingToken === 'new-one') {
+                return;
+              } else {
+                return res.token;
+              }
+            });
+        }
+      })
+      .then(async (token) => {
+        if (!token) {
+          const user = firebase.auth().currentUser;
 
-        if (!user) {
-          return;
+          if (!user) {
+            return;
+          }
+
+          token = uuid();
+          await firebase.functions().httpsCallable('setToken')({ token });
         }
 
-        const token = uuid();
-        await firebase.functions().httpsCallable('setToken')({ token });
         saveToken(token);
         logger.log(colorize('Initialized', 'muted', true));
         logger.log(
