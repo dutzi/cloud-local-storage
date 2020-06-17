@@ -10,7 +10,15 @@ const firestore = admin.firestore();
 
 export default functions.https.onRequest((req, res) => {
   cors(req, res, async () => {
-    const { token, key, data } = JSON.parse(req.body);
+    let body: any;
+
+    try {
+      body = JSON.parse(req.body);
+    } catch (err) {
+      body = req.body;
+    }
+
+    const { token, key, data } = body;
 
     const _key = key || uuid();
 
