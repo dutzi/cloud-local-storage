@@ -47,6 +47,7 @@
   "devDependencies": {
     "@types/classnames": "^2.2.10",
     "@types/react-router-dom": "^5.1.5",
+    "@types/testing-library__dom": "^7.5.0",
     "ensure-localhost": "^0.0.3"
   }
 }

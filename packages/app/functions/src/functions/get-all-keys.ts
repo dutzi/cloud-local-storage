@@ -1,39 +1,47 @@
 import * as functions from 'firebase-functions';
 import getUserByToken from '../utils/get-user-by-token';
+import cors from 'cors';
+
+const corsHandler = cors({
+  origin: true,
+  methods: ['GET'],
+});
 
 export default functions.https.onRequest(async (req, res) => {
-  const { token } = req.query;
+  corsHandler(req, res, async () => {
+    const { token } = req.query;
 
-  if (!token) {
-    res.send({
-      error: true,
-      errorCode: 'missing-token',
-    });
+    if (!token) {
+      res.send({
+        error: true,
+        errorCode: 'missing-token',
+      });
 
-    return;
-  }
+      return;
+    }
 
-  if (typeof token !== 'string') {
-    res.send({
-      error: true,
-      errorCode: 'token-invalid',
-    });
+    if (typeof token !== 'string') {
+      res.send({
+        error: true,
+        errorCode: 'token-invalid',
+      });
 
-    return;
-  }
+      return;
+    }
 
-  const user = await getUserByToken(token);
+    const user = await getUserByToken(token);
 
-  if (!user) {
-    res.send({
-      error: true,
-      errorCode: 'token-incorrect',
-    });
+    if (!user) {
+      res.send({
+        error: true,
+        errorCode: 'token-incorrect',
+      });
 
-    return;
-  }
+      return;
+    }
 
-  const storages = await user.ref.collection('data').get();
+    const storages = await user.ref.collection('data').get();
 
-  res.send({ keys: storages.docs.map((storage) => storage.id) });
+    res.send({ keys: storages.docs.map((storage) => storage.id) });
+  });
 });

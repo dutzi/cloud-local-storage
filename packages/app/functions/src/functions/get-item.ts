@@ -1,14 +1,17 @@
 import * as admin from 'firebase-admin';
 import * as functions from 'firebase-functions';
-import corsOptions from '../cors-options';
 import getUserByToken from '../utils/get-user-by-token';
+import cors from 'cors';
 
-const cors = require('cors')(corsOptions);
+const corsHandler = cors({
+  origin: true,
+  methods: ['GET'],
+});
 
 const firestore = admin.firestore();
 
 export default functions.https.onRequest((req, res) => {
-  cors(req, res, async () => {
+  corsHandler(req, res, async () => {
     const { token, key } = req.query;
 
     if (!key) {

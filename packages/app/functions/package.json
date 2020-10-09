@@ -17,10 +17,12 @@
   "dependencies": {
     "cors": "^2.8.5",
     "firebase-admin": "^8.10.0",
-    "firebase-functions": "^3.6.1",
+    "firebase-functions": "^3.11.0",
     "uuidv4": "^6.0.9"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/testing-library__dom": "^7.5.0",
     "@types/uuidv4": "^5.0.0",
     "firebase-functions-test": "^0.2.0",
     "tslint": "^5.12.0",

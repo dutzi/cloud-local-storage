@@ -3,7 +3,7 @@ import * as functions from 'firebase-functions';
 
 const firestore = admin.firestore();
 
-export default functions.https.onCall(async (data, context) => {
+export default functions.https.onCall(async (_, context) => {
   const uid = context.auth?.uid;
 
   if (!uid) {
