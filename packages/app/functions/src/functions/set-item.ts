@@ -21,7 +21,24 @@ export default functions.https.onRequest((req, res) => {
       body = req.body;
     }
 
-    const { token, key, data } = body;
+    const {
+      token: bodyToken,
+      key: bodyKey,
+      data: bodyData,
+      value: bodyValue,
+    } = body;
+
+    const {
+      token: queryToken,
+      key: queryKey,
+      data: queryData,
+      value: queryValue,
+    } = req.query;
+
+    const token = bodyToken ?? queryToken;
+    const key = bodyKey ?? queryKey;
+    const data = bodyData ?? queryData;
+    const value = bodyValue ?? queryValue;
 
     const _key = key || uuid();
 
@@ -57,11 +74,11 @@ export default functions.https.onRequest((req, res) => {
 
       await firestore
         .doc(`/users/${user.id}/data/${_key}`)
-        .set({ data, dateModified: new Date().getTime() });
+        .set({ data: data ?? value, dateModified: new Date().getTime() });
     } else {
       await firestore
         .doc(`/data/${_key}`)
-        .set({ data, dateModified: new Date().getTime() });
+        .set({ data: data ?? value, dateModified: new Date().getTime() });
     }
 
     res.send({ key: _key });
