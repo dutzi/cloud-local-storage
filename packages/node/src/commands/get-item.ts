@@ -12,6 +12,6 @@ export default function getItem(key: string, token?: string) {
     .then((res) => {
       if (res && 'data' in res) {
         return res.data;
-      } else throw res;
+      }
     });
 }
