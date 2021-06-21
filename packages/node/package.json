@@ -1,6 +1,6 @@
 {
   "name": "cloud-local-storage",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "lib/index.js",
   "scripts": {
     "start": "tsc --watch",
@@ -17,6 +17,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@types/node": "^15.12.4",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
