@@ -18,7 +18,7 @@
   "description": "",
   "dependencies": {
     "@types/node": "^15.12.4",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^3.1.1"
   },
   "devDependencies": {
     "@types/inquirer": "^6.5.0",
