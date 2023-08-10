@@ -21,7 +21,10 @@ export default function WebAPI({
         <div className={styles.section}>
           <h2>getItem</h2>
           <div className={styles.methodAndPath}>
-            GET <span className={styles.muted}>https://cls.tools/</span>
+            GET{' '}
+            <span className={styles.muted}>
+              https://cloud-local-storage.web.app/
+            </span>
             getItem?token=afd…&amp;key=some-key
           </div>
           <h3>Query Params</h3>
@@ -54,7 +57,10 @@ export default function WebAPI({
         <div className={styles.section}>
           <h2>setItem</h2>
           <div className={styles.methodAndPath}>
-            POST <span className={styles.muted}>https://cls.tools/</span>
+            POST{' '}
+            <span className={styles.muted}>
+              https://cloud-local-storage.web.app/
+            </span>
             setItem
           </div>
           <h3>
@@ -97,7 +103,10 @@ export default function WebAPI({
         <div className={styles.section}>
           <h2>getAllKeys</h2>
           <div className={styles.methodAndPath}>
-            GET <span className={styles.muted}>https://cls.tools/</span>
+            GET{' '}
+            <span className={styles.muted}>
+              https://cloud-local-storage.web.app/
+            </span>
             getAllKeys?token=afde3b08…
           </div>
           <h3>Query Params</h3>

@@ -10,4 +10,4 @@ There's a Node SDK, and web API and also a CLI Tool that helps you manage you st
 
 Cloud Local Storage is free, and opensourced, and will always be.
 
-[Read the docs](https://cls.tools/docs)
+[Read the docs](https://cloud-local-storage.web.app/)
